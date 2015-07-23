@@ -15,13 +15,14 @@ OO.ready(function() {
 </SCRIPT>
 <STYLE text="text/css">
         #start_button{
-            width:150px;
-            height:150px;
+            width:145px;
+            height:145px;
             position:fixed;
             top:200px;
             left:100px;
             z-index:1;
             background-image: url(playButton.png);
+
         }
         #ooyalaplayer{
             position:fixed;
@@ -32,7 +33,7 @@ OO.ready(function() {
     </STYLE>
 </HEAD>
 <BODY>
-	<button id='start_button' onClick="button.style.visibility = "hidden";ooplayer.play();" style='position:relative;display:block'></button>
+	<button id='start_button' onClick="ooplayer.play();" style='position:relative;display:block'></button>
 	<div id='ooyalaplayer' style='width:640px;height:360px;position:absolute'>
 </BODY>
 </HTML>
