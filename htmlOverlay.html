@@ -1,11 +1,11 @@
 <HTML>
 <HEAD>
 
-<SCRIPT src="http://player.ooyala.com/v3/d3cf86763d9049329ffc74fb94b794b8?platform=flash"></SCRIPT>
+<SCRIPT src="http://player.ooyala.com/v3/e8ba02d7f81a4bd1a24da6c3b744770c?platform=flash"></SCRIPT>
 <SCRIPT type="text/javascript">
 var ooplayer;
 OO.ready(function() {
-	ooplayer = OO.Player.create('ooyalaplayer', 'Fuazd2czpqhkPUM2qTgPqfxamv4EPeqH', {
+	ooplayer = OO.Player.create('ooyalaplayer', 'U2OGd0dTqW234F7ilfI-z_ovMcFt2Flo', {
 		wmode: 'transparent'
 			/* Additional Player configuration */
 	});
@@ -22,7 +22,7 @@ OO.ready(function() {
             top:200px;
             left:100px;
             z-index:1;
-            background-image: url(not_a.gif);
+            background-image: url(playButton.png);
         }
         #ooyalaplayer{
             position:fixed;
@@ -33,7 +33,7 @@ OO.ready(function() {
     </STYLE>
 </HEAD>
 <BODY>
-	<button id='start_button' onClick="ooplayer.play()" style='position:relative;display:block'></button>
+	<button id='start_button' onClick="ooplayer.play();button.style.visibility = "hidden";" style='position:relative;display:block'></button>
 	<div id='ooyalaplayer' style='width:640px;height:360px;position:absolute'>
 </BODY>
 </HTML>
