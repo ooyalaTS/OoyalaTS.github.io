@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+
+<SCRIPT type="text/javascript">
+var ooplayer;
+OO.ready(function() {
+	ooplayer = OO.Player.create('ooyalaplayer', 'Fuazd2czpqhkPUM2qTgPqfxamv4EPeqH', {
+		wmode: 'transparent'
+			/* Additional Player configuration */
+	});
+});
+</SCRIPT>
+<STYLE text="text/css">
+        #start_button{
+            width:40px;
+            height:40px;
+            background-color:blue;
+            position:fixed;
+            top:80px;
+            left:15px;
+            z-index:1;
+            background-image: url(not_a.gif);
+        }
+        #ooyalaplayer{
+            position:fixed;
+            left:30px;
+            top:30px;
+            z-index:-1;
+        }
+    </STYLE>
+</HEAD>
+<BODY>
+	<div id='start_button' style='position:relative;display:block'>Test</div>
+	<div id='ooyalaplayer' style='width:640px;height:360px;position:absolute'>
+</BODY>
+</HTML>
