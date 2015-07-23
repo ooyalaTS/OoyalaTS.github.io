@@ -9,6 +9,8 @@ OO.ready(function() {
 		wmode: 'transparent'
 			/* Additional Player configuration */
 	});
+
+
 });
 </SCRIPT>
 <STYLE text="text/css">
@@ -17,8 +19,8 @@ OO.ready(function() {
             height:40px;
             background-color:blue;
             position:fixed;
-            top:80px;
-            left:15px;
+            top:200px;
+            left:100px;
             z-index:1;
             background-image: url(not_a.gif);
         }
@@ -31,7 +33,7 @@ OO.ready(function() {
     </STYLE>
 </HEAD>
 <BODY>
-	<div id='start_button' style='position:relative;display:block'>Test</div>
+	<button id='start_button' onClick="ooplayer.play();" style='position:relative;display:block'>Test</button>
 	<div id='ooyalaplayer' style='width:640px;height:360px;position:absolute'>
 </BODY>
 </HTML>
