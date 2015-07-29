@@ -6,7 +6,7 @@
 
     <!-- Load Ooyala Player -->
     <script src='http://player.ooyala.com/v3/e18ab1da1813483499554ea2d8e67fbd'></script>
-<style text="text/css">
+    <style text="text/css">
         #watermark{
             width:646px;
             height:109px;
@@ -16,7 +16,7 @@
             z-index:1;
             opacity:0.5;
         }
-        #playerWrapper{
+        #playerwrapper{
             position:fixed;
             left:30px;
             top:30px;
@@ -33,7 +33,7 @@
     <img id='watermark' src='ooyala.png'></img>
 
     <!-- The DIV elements specify the layout for the content elements. -->
-    <div id='playerwrapper' style='width:480px;height:360px;'></div>
+    <div id='playerwrapper' style='width:680px;height:560px;'></div>
 
     <script>
       // Surround everything with OO.ready to make sure the script has
@@ -41,9 +41,9 @@
       OO.ready(function() {
         window.player = OO.Player.create(
           'playerwrapper',
-          'hkbTd2czrIYRs4-HnJ9nVcHSxtA07FUK', {
+          '', {
             // add the embedded player parameters here
-            autoplay: true 
+            autoplay: false 
           }
         );
       });
