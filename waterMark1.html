@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>WaterMark Demo </title>
+
+    <!-- Load Ooyala Player -->
+    <script src='http://player.ooyala.com/v3/e18ab1da1813483499554ea2d8e67fbd'></script>
+<style text="text/css">
+        #watermark{
+            width:646px;
+            height:109px;
+            position:fixed;
+            top:143px;
+            left:27px;
+            z-index:1;
+            opacity:0.5;
+        }
+        #playerWrapper{
+            position:fixed;
+            left:30px;
+            top:30px;
+            z-index:-1;
+        }
+    </style>
+
+ </head>
+
+  <body>
+    Watermark demo - Adjust the opacity value for the element # as needed. 
+
+    <!-- Watermark -->
+    <img id='watermark' src='ooyala.png'></img>
+
+    <!-- The DIV elements specify the layout for the content elements. -->
+    <div id='playerwrapper' style='width:480px;height:360px;'></div>
+
+    <script>
+      // Surround everything with OO.ready to make sure the script has
+      // loaded and initialized.        
+      OO.ready(function() {
+        window.player = OO.Player.create(
+          'playerwrapper',
+          'hkbTd2czrIYRs4-HnJ9nVcHSxtA07FUK', {
+            // add the embedded player parameters here
+            autoplay: true 
+          }
+        );
+      });
+    </script>
+  </body>
+</html>       
+     
