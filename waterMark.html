@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>Watermark</TITLE>
+<SCRIPT src="http://player.ooyala.com/v3/5c635ebea91b415a9b6e5123128d279c?platform=html"></SCRIPT>
+<SCRIPT type="text/javascript">
+var ooplayer;
+OO.ready(function() {
+	ooplayer = OO.Player.create('ooyalaplayer', 'U2OGd0dTqW234F7ilfI-z_ovMcFt2Flo', {});
+
+});
+</SCRIPT>
+<STYLE text="text/css">
+        #watermark{
+            width:145px;
+            height:145px;
+            position:fixed;
+            top:20px;
+            left:10px;
+            z-index:1;
+        }
+        #ooyalaplayer{
+            position:fixed;
+            left:30px;
+            top:30px;
+            z-index:-1;
+        }
+    </STYLE>
+</HEAD>
+<BODY>
+	<img id='watermark' src='ooyala.png'></img>
+	<div id='ooyalaplayer' style='width:640px;height:360px;position:absolute'>
+</BODY>
+</HTML>
