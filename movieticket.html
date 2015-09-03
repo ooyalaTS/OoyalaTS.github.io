@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Movie ticket test</title>
+
+    <!-- Load Ooyala Player -->
+<script type="text/javascript" src="https://player.ooyala.com/v3/c24814aaca8341e9a5adee2f46a012f5?platform=html5-priority"></script>
+<script type="text/javascript">
+var ooyalaPlayer;
+
+OO.ready(function() {
+    var playerConfiguration = {
+        playlistsPlugin: {"data":["6908882c24dd43b48518f58221219e2d"]},
+       autoplay: false,
+        loop: false,
+        height: 486,
+        width: 640,
+        useFirstVideoFromPlaylist: true
+    };
+
+    ooyalaPlayer = OO.Player.create('playerContainer', '', playerConfiguration);
+});
+
+  </head>
+
+
+  <body>
+  
+
+<div id="playerContainer">&nbsp;</div>
+  </body>
+</html>       
+     
