@@ -5,17 +5,18 @@
     <title>Movie ticket test</title>
 
     <!-- Load Ooyala Player -->
-<script type="text/javascript" src="https://player.ooyala.com/v3/c24814aaca8341e9a5adee2f46a012f5?platform=html5-priority"></script>
+<script type="text/javascript" src="https://player.ooyala.com/v3/65cda046190247179510a9f6b9b143d3?platform=html5-priority"></script>
 <script type="text/javascript">
 var ooyalaPlayer;
 
 OO.ready(function() {
     var playerConfiguration = {
-        playlistsPlugin: {"data":["IybWJhdzoil3ON04rZwiPugQwRh3Wiov"]},
-       autoplay: false,
+        playlistsPlugin: {"data":["b9d61d5636214cf3aa263ef9b59a96bd"]},
+        autoplay: false,
         loop: false,
         height: 486,
-        width: 640
+        width: 640,
+	useFirstVideoFromPlaylist: true
     };
 
     ooyalaPlayer = OO.Player.create('playerContainer', '', playerConfiguration);
