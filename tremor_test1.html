@@ -1,1 +1,28 @@
-<script src='//player.ooyala.com/v3/e8ba02d7f81a4bd1a24da6c3b744770c?platform=html5'></script><div id='ooyalaplayer' style='width:1280px;height:720px'></div><script>OO.ready(function() { OO.Player.create('ooyalaplayer', '14b2MzdjqAm5dlZb6Q6dhZ1YBSTnetzn',{"autoplay":true}); });</script><noscript><div>Please enable Javascript to watch this video</div></noscript>
+<script src='//player.ooyala.com/v3/e8ba02d7f81a4bd1a24da6c3b744770c?platform=html5'></script>
+
+
+<div id='ooyalaplayer' style='width:1280px;height:720px'></div>
+
+
+<script>
+
+	OO.ready(function() { 
+		var videoPlayer = OO.Player.create('ooyalaplayer', '14b2MzdjqAm5dlZb6Q6dhZ1YBSTnetzn',
+			{'autoplay':true,
+			  'height':'100%',
+    		  'width':'100%',
+    		  'vast':{
+        		tagUrl: prepareUrl(videoPlayer)
+  				 }, 
+			}
+		); 
+	});
+
+	function prepareUrl(test) {
+		return 'http://testrurl';
+	}
+
+</script>
+
+
+<noscript><div>Please enable Javascript to watch this video</div></noscript>
