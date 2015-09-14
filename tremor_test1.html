@@ -12,14 +12,15 @@
 			  'height':'100%',
     		  'width':'100%',
     		  'vast':{
-        		tagUrl: prepareUrl(videoPlayer)
+        		tagUrl: prepareUrl()
   				 }, 
 			}
 		); 
 	});
 
 	function prepareUrl(test) {
-		return 'http://testrurl';
+
+		return 'http://testrurl'+videoPlayer.getCurrentItemTitle();
 	}
 
 </script>
