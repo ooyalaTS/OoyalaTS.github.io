@@ -12,16 +12,16 @@
 			  'height':'100%',
     		  'width':'100%',
     		  'vast':{
-        		tagUrl: prepareUrl()
+        		tagUrl: function prepareUrl(test) {
+        					console.log(videoPlayer.clientWidth)
+							return 'http://testrurl';
+							}
   				 }, 
 			}
 		); 
 	});
 
-	function prepareUrl(test) {
-
-		return 'http://testrurl';
-	}
+	
 
 </script>
 
