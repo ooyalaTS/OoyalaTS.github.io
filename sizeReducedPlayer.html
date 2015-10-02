@@ -16,18 +16,25 @@
     Player with 360 x 202 size.
 
     <!-- The DIV elements specify the layout for the content elements. -->
-    <div id='playerwrapper' style='width:360px;height:202px;'></div>
-
-    <div id='playerwrapper' style='width:462px;height:320px;'></div>
+    <div id='playerwrapper1' style='width:360px;height:202px;'></div>
+    <br>
+    Player with 462 x 320 size.
+    <div id='playerwrapper2' style='width:462px;height:320px;'></div>
     <script>
       // Surround everything with OO.ready to make sure the script has
       // loaded and initialized.        
       OO.ready(function() {
-        window.player = OO.Player.create(
-          'playerwrapper',
+        window.player1 = OO.Player.create(
+          'playerwrapper1',
           'BuaHJodDqhZYHtL-x9trMb967VEyWfGm', {
             // add the embedded player parameters here
             autoplay: false 
+          }
+        window.player2 = OO.Player.create(
+          'playerwrapper2',
+          'BuaHJodDqhZYHtL-x9trMb967VEyWfGm', {
+            // add the embedded player parameters here
+            autoplay: false
           }
         );
       });
