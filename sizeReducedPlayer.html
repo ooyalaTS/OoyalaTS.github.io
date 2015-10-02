@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>My Test Player V3 Web Page </title>
+
+    <!-- Load Ooyala Player -->
+    <script src='http://player.ooyala.com/v3/89a379a0e1e94feca5bb87c46a8b2d5e?platform=html5-fallback'></script>
+
+    <!-- Load additional custom modules -->
+    <!-- script src='custom_module_name.js'></script> -->
+  </head>
+
+
+  <body>
+    Player with 360 x 202 size.
+
+    <!-- The DIV elements specify the layout for the content elements. -->
+    <div id='playerwrapper' style='width:360px;height:202px;'></div>
+
+    <script>
+      // Surround everything with OO.ready to make sure the script has
+      // loaded and initialized.        
+      OO.ready(function() {
+        window.player = OO.Player.create(
+          'playerwrapper',
+          '95NzNydzoEG3JaRH2TU4xlmi3ywGslZJ', {
+            // add the embedded player parameters here
+            autoplay: false 
+          }
+        );
+      });
+    </script>
+  </body>
+</html>       
+     
