@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>DISCOVERY PLAYER </title>
+
+    <!-- Load Ooyala Player -->
+    <script src='http://player.ooyala.com/v3/ee52d323014a47b9b603b82e677afe64?platform=html5-fallback'></script>
+
+    <!-- Load additional custom modules -->
+    <!-- script src='custom_module_name.js'></script> -->
+  </head>
+
+
+  <body>
+    Autoplay True
+
+    <!-- The DIV elements specify the layout for the content elements. -->
+    <div id='playerwrapper' style='width:480px;height:360px;'></div>
+
+    <script>
+      // Surround everything with OO.ready to make sure the script has
+      // loaded and initialized.        
+      OO.ready(function() {
+        window.player = OO.Player.create(
+          'playerwrapper',
+          '14b2MzdjqAm5dlZb6Q6dhZ1YBSTnetzn', {
+            // add the embedded player parameters here 
+          }
+        );
+      });
+    </script>
+  </body>
+</html>       
+     
