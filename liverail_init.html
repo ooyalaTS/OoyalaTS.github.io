@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Liverail PREROLL flash example</title>
+<script src='http://player.ooyala.com/v3/5c9b58f405574db58d82398c96a59683?platform=html5-priority'></script>
+
+<style>
+ 
+  .oo_tap_panel{visibility: hidden}
+  .oo_ads_countdown{visibility: hidden}
+ </style>
+</head>
+
+<body>
+<!-- Player Placement -->
+<p>Flash Player </p>
+<div id='playerwrapper' style='width:640px;height:360px;'></div>
+<script type="text/javascript">
+
+            var ooyalaEmbedCode = 'J0NzAxMjqkPGgAKNtXbij4aUsrjAhzNO';
+      
+    var opts = {};
+ 
+    window.videoPlayer = OO.Player.create('playerwrapper',ooyalaEmbedCode,{ 
+  'adSetCode': 'c5c863145474479ca1eea8c4633d283a',
+  autoplay:false,
+  "liverail-ads-manager": {  LR_ADMAP: "in::10" },
+ onCreate: function(player) {
+         window.messageBus = player.mb;  // save reference to message bus
+       } 
+        });
+
+    console.log('player is init\'d', ooyalaEmbedCode);
+
+    window.onload = function() {
+
+        document.getElementById('changeEmbedCode').addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (videoPlayer) {
+                var ooyalaEmbedCode = document.getElementById('newEmbedCode').value;
+                videoPlayer.setEmbedCode(ooyalaEmbedCode, { 
+  'adSetCode': 'c5c863145474479ca1eea8c4633d283a',
+  autoplay:true,
+   "liverail-ads-manager": {  LR_ADMAP: "in::10" },
+ onCreate: function(player) {
+         window.messageBus = player.mb;  // save reference to message bus
+       } 
+
+                         
+                    });
+            }
+        });
+
+    };
+
+ /// this will subscribe to ALL events
+window.messageBus.subscribe('*', 'example', 
+     function(eventName) {
+    
+       console.log("RECEIVED EVENT: player " +eventName + JSON.stringify(arguments) );
+   });
+
+
+</script>
+
+<form id="changeEmbedCode">
+    <label for="newEmbedCode">change embed code:</label>
+    <input id="newEmbedCode" placeholder="J0NzAxMjqkPGgAKNtXbij4aUsrjAhzNO" value="J0NzAxMjqkPGgAKNtXbij4aUsrjAhzNO" style="
+    width: 300px;"/>
+    <button type="submit">do it</button>
+</form>
+
+<p>Liverail example with MID roll At 0:10</p>
+
+
+</body>
+</html>
+
