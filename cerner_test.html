@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Cerner-Test Page</title>
+
+    <!-- Load Ooyala Player -->
+    <script src='http://player.ooyala.com/v3/hwb25xeDpV8ikJ6c4K1V_w2015h7cZSh?platform=html5-fallback'></script>
+
+    <!-- Load additional custom modules -->
+    <!-- script src='custom_module_name.js'></script> -->
+  </head>
+
+
+  <body>
+    Simple Player load
+
+    <!-- The DIV elements specify the layout for the content elements. -->
+    <div id='playerwrapper' style='width:480px;height:360px;'></div>
+
+    <script>
+      // Surround everything with OO.ready to make sure the script has
+      // loaded and initialized.        
+      OO.ready(function() {
+        window.player = OO.Player.create(
+          'playerwrapper',
+          'ZDNjZGI3ZGRjOWVhMDZmMzYyNDYzMzJk', {
+            // add the embedded player parameters here
+            autoplay: false 
+          }
+        );
+      });
+    </script>
+  </body>
+</html>       
+     
