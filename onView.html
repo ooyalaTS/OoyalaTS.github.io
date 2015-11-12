@@ -63,7 +63,8 @@ $(document).ready(function(){
     $(window).scroll(function(){
         if ($('#ooyalaplayer').isOnScreen()) {
             // The element is visible, do something
-            alert("in viewport!");
+            //alert("in viewport!");
+            OO.Player.play();
         } else {
             // The element is NOT visible, do something else
         }
