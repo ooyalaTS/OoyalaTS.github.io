@@ -52,19 +52,23 @@
 <div id='blocker' style='width:840px;height:560px'></div>
 <div id='ooyalaplayer' style='width:640px;height:360px'></div>
 
-<script>
+<!-- script>
 
 OO.ready(function() { var ooyalaplayer = OO.Player.create('ooyalaplayer', 'R5ZmdxdzoS5lT8dpVwt4uOSDLLfo9-hM', {autoplay:'false'}); });
 
-</script>
+</script -->
 
 <script>
 $(document).ready(function(){
+    OO.ready(function() {
+     var ooplayer = OO.Player.create('ooyalaplayer', 'R5ZmdxdzoS5lT8dpVwt4uOSDLLfo9-hM', {autoplay:'false'}); 
+    });
+
     $(window).scroll(function(){
         if ($('#ooyalaplayer').isOnScreen()) {
             // The element is visible, do something
             //alert("in viewport!");
-            ooyalaplayer.play();
+            ooplayer.play();
         } else {
             // The element is NOT visible, do something else
         }
