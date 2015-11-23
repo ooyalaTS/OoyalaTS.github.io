@@ -1,0 +1,95 @@
+
+
+<html>
+<head>
+    <title>Google IMA POST MID PREROLL example</title>
+
+    <script src='http://player.ooyala.com/v3/e4651a03b844d7faf2f48c764f1ca7c?debug=true&platform=html5-priority'></script>
+  
+</head>
+<body>
+<!-- Player Placement -->
+<p>HTML5 Player </p>
+<div id='playerwrapper' style='width:640px;height:360px;'></div>
+<script type="text/javascript">
+
+            var ooyalaEmbedCode = 'J0NzAxMjqkPGgAKNtXbij4aUsrjAhzNO';
+      
+    var opts = {};
+ 
+    window.videoPlayer = OO.Player.create('playerwrapper',ooyalaEmbedCode,{ 
+    autoplay:true,
+    "google-ima-ads-manager":{
+        "adTagUrl" : "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/7521029/RON_Ad_Unit&ciu_szs&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=%5Breferrer_url%5D&correlator=%5Btimestamp%5D&cmsid=349&vid=xnc3lxaTorMG5FyqqVor2hYtqCJWO74e"       
+                            },onCreate: function(player) {
+         window.messageBus = player.mb;  // save reference to message bus
+                                                        } 
+        });
+
+    console.log('player is init\'d', ooyalaEmbedCode);
+
+    window.onload = function() {
+
+        document.getElementById('changeEmbedCode').addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (videoPlayer) {
+                var ooyalaEmbedCode = document.getElementById('newEmbedCode').value;
+                videoPlayer.setEmbedCode(ooyalaEmbedCode, { 
+    autoplay:true,
+    "google-ima-ads-manager":{
+        "adTagUrl" : "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/7521029/RON_Ad_Unit&ciu_szs&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=%5Breferrer_url%5D&correlator=%5Btimestamp%5D&cmsid=349&vid=xnc3lxaTorMG5FyqqVor2hYtqCJWO74e",
+        "playWhenAdClick" : "false"     
+                            },onCreate: function(player) {
+         window.messageBus = player.mb;  // save reference to message bus
+       } 
+
+                         
+                    });
+            }
+        });
+
+    };
+
+ /// this will subscribe to ALL events
+window.messageBus.subscribe('*', 'example', 
+     function(eventName) {
+    
+       console.log("RECEIVED EVENT: player " +eventName + JSON.stringify(arguments) ,event ,arguments  );
+   });
+
+window.messageBus.subscribe('adsPlayed', 'example', 
+     function(eventName) {
+    
+       console.log("RECEIVED EVENT: player " +eventName + JSON.stringify(arguments) );
+        window.messageBus.subscribe('playing', 'example', 
+           function(eventName) {
+    
+       console.log("RECEIVED EVENT: player subscribing to the content playing event "  );
+         window.messageBus.unsubscribe('playing', 'example' ); 
+              console.log("unsubscribe from play now " ); 
+
+
+   });
+
+
+   });
+
+
+
+</script>
+
+<form id="changeEmbedCode">
+    <label for="newEmbedCode">change embed code:</label>
+    <input id="newEmbedCode" placeholder="J0NzAxMjqkPGgAKNtXbij4aUsrjAhzNO" value="J0NzAxMjqkPGgAKNtXbij4aUsrjAhzNO" style="
+    width: 300px;"/>
+    <button type="submit">do it</button>
+</form>
+
+<p>IMA example with PREROLL</p>
+<p>IMA example with MIDROLL at 0:15</p>
+<p>IMA example with MIDROLL at 0:30</p>
+<p>IMA example with POSTROLL</p
+        
+
+</body>
+</html>
