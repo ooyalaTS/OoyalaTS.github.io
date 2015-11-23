@@ -20,7 +20,8 @@
     window.videoPlayer = OO.Player.create('playerwrapper',ooyalaEmbedCode,{ 
     autoplay:true,
     "google-ima-ads-manager":{
-        "adTagUrl" : "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/7521029/RON_Ad_Unit&ciu_szs&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=%5Breferrer_url%5D&correlator=%5Btimestamp%5D&cmsid=349&vid=xnc3lxaTorMG5FyqqVor2hYtqCJWO74e"       
+        "adTagUrl" : "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/7521029/RON_Ad_Unit&ciu_szs&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=%5Breferrer_url%5D&correlator=%5Btimestamp%5D&cmsid=349&vid=xnc3lxaTorMG5FyqqVor2hYtqCJWO74e",
+        "playWhenAdClick" : "false"       
                             },onCreate: function(player) {
          window.messageBus = player.mb;  // save reference to message bus
                                                         } 
