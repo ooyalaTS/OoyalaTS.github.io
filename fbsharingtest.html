@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# video: http://ogp.me/ns/video#">
+<!-- The following tag is required for passive sharing -->
+<meta property="fb:app_id" content="yourFacebookAppIdHere" />
+<meta property="og:type" content="video.other" /> 
+<meta property="og:title" content="FBsharingOO" />
+<meta property="og:description" content="FBsharingOO is awesome" />
+<meta property="og:url" content="http://ooyalats.github.io/fbsharingtest.html">
+<meta property="og:image" content="http://i.imgur.com/bNy5yCb.jpg"/>
+<meta property="og:video" content="http://player.ooyala.com/nuplayer?embedCode=95ZXg4eTpdfByhlX5-v0sPPCH19kiK_F&playerBrandingId=e8ba02d7f81a4bd1a24da6c3b744770c&keepEmbedCode=true&docUrl=http://ooyalats.github.io" />
+<meta property="og:video:secure_url” content="https://player.ooyala.com/nuplayer?embedCode=95ZXg4eTpdfByhlX5-v0sPPCH19kiK_F&keepEmbedCode=true" />
+<meta property="og:video:type" content="application/x-shockwave-flash" />
+ <meta property="og:video:height" content="480" />
+<meta property="og:video:width" content="640" />
+
+<title>My FB sharing test </title>
+
+    <!-- Load Ooyala Player -->
+    <script src='http://player.ooyala.com/v3/e8ba02d7f81a4bd1a24da6c3b744770c'></script>
+
+    <!-- Load additional custom modules -->
+    <!-- script src='custom_module_name.js'></script> -->
+  </head>
+
+
+  <body>
+    Simple Player load
+
+    <!-- The DIV elements specify the layout for the content elements. -->
+    <div id='playerwrapper' style='width:480px;height:360px;'></div>
+
+    <script>
+      // Surround everything with OO.ready to make sure the script has
+      // loaded and initialized.
+      OO.ready(function() {
+        window.player = OO.Player.create(
+          'playerwrapper',
+          '95ZXg4eTpdfByhlX5-v0sPPCH19kiK_F', {
+            // add the embedded player parameters here
+            autoplay: false
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
