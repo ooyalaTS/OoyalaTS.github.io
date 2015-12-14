@@ -1,0 +1,100 @@
+<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/2000/REC-xhtml1-200000126/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>BNM Analytics Tracking Test</title>
+
+<link rel="stylesheet" type="text/css" media="screen" href="http://se.ooyala.com/playertest/css/new.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src='http://player.ooyala.com/v3/e8ba02d7f81a4bd1a24da6c3b744770c?debug=true'></script>
+</head>
+
+<body id="bodyId" class="mktEditable" align="center">
+<div id="outerWrapDiv" class="mktEditable">
+<div id="innerWrapDiv">
+
+<div id="mktHeader" class="mktEditable">
+
+<div id="top-header">
+    <div id="zone-user-wrapper">
+        <div id="logo-wrapper"><a href="#" id="logo"><img src="http://se.ooyala.com/playertest/images/logo_landingpage.png" alt="Ooyala" width="168" height="26" border="0" /></a></div>
+        <h6>Powering personalized video experiences across all screens.</h6>
+    </div>
+    <div id="header-hr"></div>
+<div class="block block-system block-menu block-main-menu block-system-main-menu odd block-without-title" id="block-system-main-menu">
+    <div class="block-inner clearfix">
+    <div id="top-nav" class="content clearfix">
+        <ul class="menu">
+            <li class="first leaf"><a href="#">Solutions</a></li>
+            <li class="leaf"><a href="#">Services</a></li>
+            <li class="leaf" style=""><a href="#">Customers</a></li>
+            <li class="leaf" style=""><a href="#">Partners</a></li>
+            <li class="leaf" style=""><a href="#">Resources</a></li>
+            <li class="leaf" style=""><a href="#">About</a></li>
+            <li class="leaf" style=""><a href="#">VideoMind</a></li>
+            <li class="last leaf"><a href="#" id="contact-us-main" style="margin-right:0px;">Contact Us</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
+</div>
+
+</div>
+
+<div id="mktContent" class="mktEditable">
+
+<center>
+    <br /><br /><br />
+    
+<p>This is a test page for Analytics Tracking</p>
+<div style="display:flex;">
+<!-- Player Placement -->
+<div id='playerwrapper1' style='width:440px;height:270px;padding: 10px 10px 10px 10px;'></div>
+<div id='playerwrapper2' style='width:440px;height:270px;padding: 10px 10px 10px 10px'></div>
+</div>
+<div style="display:flex">
+<div id='playerwrapper3' style='width:440px;height:270px;padding: 10px 10px 10px 10px'></div>
+<div id='playerwrapper4' style='width:440px;height:270px;padding: 10px 10px 10px 10px'></div>
+</div>
+
+
+
+<script type="text/javascript">
+
+    var ooyalaEmbedCode = '14b2MzdjqAm5dlZb6Q6dhZ1YBSTnetzn';  
+    var opts = {};
+ 
+    window.videoPlayer1 = OO.Player.create('playerwrapper1',ooyalaEmbedCode,{ 
+    autoplay:true,
+    docUrl:'http://vaidee.com/topLeft',
+    onCreate: function(player) {
+         window.messageBus = player.mb;  // save reference to message bus
+         window.player = player;
+                                                        } 
+        });
+
+    window.videoPlayer2 = OO.Player.create('playerwrapper2',ooyalaEmbedCode,{ 
+    autoplay:false,
+    'docUrl':'http://vaidee.com/topRight'
+        });
+
+    window.videoPlayer3 = OO.Player.create('playerwrapper3',ooyalaEmbedCode,{ 
+    autoplay:true,
+    docUrl:'http://vaidee.com/bottomLeft'
+        });   
+
+    window.videoPlayer4 = OO.Player.create('playerwrapper4',ooyalaEmbedCode,{ 
+    autoplay:true,
+    docUrl:'http://vaidee.com/bottomRight'
+        });                    
+
+    console.log('player is init\'d', ooyalaEmbedCode);
+
+
+
+
+</script>
+</body>
+</html>
