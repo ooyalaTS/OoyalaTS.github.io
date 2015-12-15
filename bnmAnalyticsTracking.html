@@ -68,7 +68,7 @@
  
     window.videoPlayer1 = OO.Player.create('playerwrapper1',ooyalaEmbedCode,{ 
     autoplay:true,
-    docUrl:'http://vaidee.com/topLeft',
+    docUrl:'http://topLeft.bnm-ooyala.com/topLeft',
     onCreate: function(player) {
          window.messageBus = player.mb;  // save reference to message bus
          window.player = player;
@@ -77,17 +77,17 @@
 
     window.videoPlayer2 = OO.Player.create('playerwrapper2',ooyalaEmbedCode,{ 
     autoplay:false,
-    'docUrl':'http://vaidee.com/topRight'
+    'docUrl':'http://topright.bnm-ooyala.com/topRight'
         });
 
     window.videoPlayer3 = OO.Player.create('playerwrapper3',ooyalaEmbedCode,{ 
     autoplay:true,
-    docUrl:'http://vaidee.com/bottomLeft'
+    docUrl:'http://bottomLeft.bnm-ooyala.com/bottomLeft'
         });   
 
     window.videoPlayer4 = OO.Player.create('playerwrapper4',ooyalaEmbedCode,{ 
     autoplay:true,
-    docUrl:'http://vaidee.com/bottomRight'
+    docUrl:'http://bottomRight.bnm-ooyala.com/bottomRight'
         });                    
 
     console.log('player is init\'d', ooyalaEmbedCode);
