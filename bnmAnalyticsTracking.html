@@ -69,9 +69,9 @@
     window.videoPlayer1 = OO.Player.create('playerwrapper1',ooyalaEmbedCode,{ 
     "autoplay":true,
     "analytics":{
-                        "tags": topLeft
+                        "tags": 'topLeft'
                 },
-    onCreate: function(player) {
+    "onCreate": function(player) {
          window.messageBus = player.mb;  // save reference to message bus
          window.player = player;
                                                         } 
