@@ -76,18 +76,25 @@
         });
 
     window.videoPlayer2 = OO.Player.create('playerwrapper2',ooyalaEmbedCode,{ 
-    autoplay:true,
-    docUrl:'http://toprightHtml5.bnm-ooyala.com'
-        });
+    "autoplay":true,
+    "analytics":{
+                        "tags": 'topRightHtml5'
+                }
+  });
 
     window.videoPlayer3 = OO.Player.create('playerwrapper3',ooyalaEmbedCode,{ 
-    autoplay:true,
-    docUrl:'http://bottomLeftHtml5.bnm-ooyala.com'
-        });   
+    "autoplay":true,
+    "analytics":{
+                        "tags": 'bottomLefttHtml5'
+                }
+  });  
 
     window.videoPlayer4 = OO.Player.create('playerwrapper4',ooyalaEmbedCode,{ 
-    autoplay:true,
-    docUrl:'http://bottomRightHtml5.bnm-ooyala.com'
+    "autoplay":true,
+    "docUrl":'http://bottomRightHtml5.bnm-ooyala.com'
+    "analytics":{
+                        "tags": 'http://bottomRightHtml5.bnm-ooyala.com'
+                }
         });                    
 
     console.log('player is init\'d', ooyalaEmbedCode);
