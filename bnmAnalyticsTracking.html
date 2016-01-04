@@ -68,9 +68,7 @@
  
     window.videoPlayer1 = OO.Player.create('playerwrapper1',ooyalaEmbedCode,{ 
     "autoplay":true,
-    "analytics":{
-                        "tags": 'topLeft'
-                },
+    "flashParams": {"docUrl": "http%3A%2F%2Fnewdocurltopleft.com"},
     "onCreate": function(player) {
          window.messageBus = player.mb;  // save reference to message bus
          window.player = player;
@@ -86,9 +84,7 @@
 
     window.videoPlayer3 = OO.Player.create('playerwrapper3',ooyalaEmbedCode,{ 
     "autoplay":true,
-    "analytics":{
-                        "tags": 'BottomL'
-                }
+    "flashParams": {"docUrl": "http%3A%2F%2Fnewdocurbottomleft.com"}
   });  
 
     window.videoPlayer4 = OO.Player.create('playerwrapper4',ooyalaEmbedCode,{ 
