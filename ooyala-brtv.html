@@ -1,0 +1,104 @@
+<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/2000/REC-xhtml1-200000126/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Big TV Review</title>
+
+<link rel="stylesheet" type="text/css" media="screen" href="http://se.ooyala.com/playertest/css/new.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src='http://player.ooyala.com/v3/839b4d86605a49be8baace00b628db40?debug=false'></script>
+</head>
+
+<body id="bodyId" class="mktEditable" align="center">
+<div id="outerWrapDiv" class="mktEditable">
+<div id="innerWrapDiv">
+
+<div id="mktHeader" class="mktEditable">
+
+<div id="top-header">
+    <div id="zone-user-wrapper">
+        <div id="logo-wrapper"><a href="#" id="logo"><img src="http://se.ooyala.com/playertest/images/logo_landingpage.png" alt="Ooyala" width="168" height="26" border="0" /></a></div>
+        <h6>Powering personalized video experiences across all screens.</h6>
+    </div>
+    <div id="header-hr"></div>
+<div class="block block-system block-menu block-main-menu block-system-main-menu odd block-without-title" id="block-system-main-menu">
+    <div class="block-inner clearfix">
+    <div id="top-nav" class="content clearfix">
+        <ul class="menu">
+            <li class="first leaf"><a href="#">Solutions</a></li>
+            <li class="leaf"><a href="#">Services</a></li>
+            <li class="leaf" style=""><a href="#">Customers</a></li>
+            <li class="leaf" style=""><a href="#">Partners</a></li>
+            <li class="leaf" style=""><a href="#">Resources</a></li>
+            <li class="leaf" style=""><a href="#">About</a></li>
+            <li class="leaf" style=""><a href="#">VideoMind</a></li>
+            <li class="last leaf"><a href="#" id="contact-us-main" style="margin-right:0px;">Contact Us</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
+</div>
+
+</div>
+
+<div id="mktContent" class="mktEditable">
+
+<center>
+    <br /><br /><br />
+    
+
+<div></div>
+<!-- Player Placement -->
+<p>This is a test page for video playback. Please use the URL queryparams to change the content and player sizes</p>
+<div id='playerwrapper'></div>
+
+
+<script type="text/javascript">
+
+    function getUrlVars() {
+        var vars = {};  
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+          vars[key] = value;
+        });
+        return vars;
+    }
+
+    var params = getUrlVars();
+    var playerWidth = '992px';
+    var playerHeight = '558px';
+    var ooyalaEmbedCode = 'l0YmZneTraRBj-zO8a2oyquyFIeTsEfj';
+
+    console.log("params embedCode:"+params['embedCode']);
+    console.log("params playerWidth:"+params['width']);
+    console.log("params playerHeight:"+params['height']);
+
+    if (typeof params['embedCode'] != 'undefined') {
+        ooyalaEmbedCode = params['embedCode'];
+    }
+
+    if (typeof params['width'] != 'undefined' || typeof params['height'] != 'undefined') {
+        playerWidth = params['width'];
+        playerHeight = params['height'];
+    }    
+
+    document.getElementById('playerwrapper').style.width = playerWidth
+    document.getElementById('playerwrapper').style.height = playerHeight
+ 
+    var opts = {};
+ 
+    window.videoPlayer = OO.Player.create('playerwrapper',ooyalaEmbedCode,{ 
+    autoplay:true,
+    onCreate: function(player) {
+         window.messageBus = player.mb;  // save reference to message bus
+         window.player = player;
+                                                        } 
+        });
+
+    console.log('player is init\'d', ooyalaEmbedCode);
+
+
+</script>
+</body>
+</html>
