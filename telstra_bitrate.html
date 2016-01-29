@@ -58,7 +58,7 @@
 
 <script type="text/javascript">
 
-            var ooyalaEmbedCode = 'Z3NnYydzrgS_55HpFxrNKNlN3gG2Q8Rf';
+    var ooyalaEmbedCode = 'Z3NnYydzrgS_55HpFxrNKNlN3gG2Q8Rf';
       
     var opts = {};
  
@@ -71,28 +71,10 @@
 
     console.log('player is init\'d', ooyalaEmbedCode);
 
-    window.onload = function() {
 
-        document.getElementById('changeEmbedCode').addEventListener('submit', function (e) {
-            e.preventDefault();
-            if (videoPlayer) {
-                var ooyalaEmbedCode = document.getElementById('newEmbedCode').value;
-                videoPlayer.setEmbedCode(ooyalaEmbedCode, { 
-    autoplay:true,onCreate: function(player) {
-         window.messageBus = player.mb;  // save reference to message bus
-       } 
-
-                         
-                    });
-            }
-        });
-
-    };
-
-window.messageBus.subscribe('bitrateChanged', 'example', 
+    window.messageBus.subscribe('bitrateChanged', 'example', 
      function(eventName) {
-    
-       console.log("RECEIVED EVENT: player " +eventName + JSON.stringify(arguments) );
+       console.log("RECEIVED EVENT: ----> player " +eventName + JSON.stringify(arguments) );
 
    });
 
