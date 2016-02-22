@@ -59,27 +59,36 @@
 
 <script type="text/javascript">
 
-    var ooyalaEmbedCode = 'BoaDIwMDE66mp_BSvbC4PizuW6cIfCYx';
-      
-    var opts = {};
+
+              OO.ready(function() {
+
+
+                var ooyalaEmbedCode = 'BoaDIwMDE66mp_BSvbC4PizuW6cIfCYx';
+                var opts = {};
+
+                var playerConfiguration = {
+                    playlistsPlugin: {"data":["770933e118b943228fc4d963c6e04e1d"]},
+                    autoplay: false,
+                    loop: false,
+                    height: 765,
+                    width: 962,
+                    css: 'http://cdn.josephprince.org/web_broadcast/ooyala_player-1.css',
+                    useFirstVideoFromPlaylist: true,
+                    enableChannels: true
+                };
+
  
-	// Condition check for amazon silk browser 
-	if (/\bSilk\b/.test(navigator.userAgent)) { 
+        	// Condition check for amazon silk browser 
+        	if (/\bSilk\b/.test(navigator.userAgent)) { 
 
-	//Load the playerlist player 
-	var player = pNoHook.Player.create('ooyalaplayer',ooyalaEmbedCode, { 
-	css: 'http://cdn.josephprince.org/web_broadcast/ooyala_player-1.css', 
-	"enableChannels":true 
-	} 
-	); 
-	} else{ 
+        	//Load the playerlist player 
+        	var player = pNoHook.Player.create('ooyalaplayer','', playerConfiguration); 
+        	}else{ 
 
-	//Load the default player ,which is Hook enabled. 
-	var player = pHook.Player.create('ooyalaplayer',ooyalaEmbedCode, { 
-	css: 'http://cdn.josephprince.org/web_broadcast/ooyala_player-1.css', 
-	"enableChannels":true 
-	} ); 
-}
+        	//Load the default player ,which is Hook enabled. 
+        	var player = pHook.Player.create('ooyalaplayer','', playerConfiguration); 
+            }
+        });
 
 </script>
 </body>
