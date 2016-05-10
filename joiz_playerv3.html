@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+
+<div id='playerwrapper' style='width:600px;height:400px;'></div>
+
+<script src='//player.ooyala.com/v3/884df1b4bb3845329d53bc83a3c16363'></script>
+<script type="text/javascript">
+
+    var ooyalaEmbedCode = 'IzaHNidTp-T1bOy6pYAFxWxdVLWo3pL2';
+    var opts = {};
+
+    /*window.videoPlayer = OO.Player.create('playerwrapper',ooyalaEmbedCode,{ 
+    autoplay:false,
+        }); */
+   OO.ready(function() {window.pp = OO.Player.create('playerwrapper', 'IzaHNidTp-T1bOy6pYAFxWxdVLWo3pL2', {});}); 
+
+    console.log('player is init\'d', ooyalaEmbedCode);
+
+
+</script>
+</body>
+</html>
