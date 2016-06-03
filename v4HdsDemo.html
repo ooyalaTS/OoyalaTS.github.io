@@ -1,0 +1,59 @@
+
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>V4 Ooyala Player Demo - HDS</title>
+		 <script src="//player.ooyala.com/static/v4/stable/4.3.3/core.min.js"></script>
+		  <script src="//player.ooyala.com/static/v4/stable/4.3.3/video-plugin/main_html5.min.js"></script>
+		  <!-- In order to play HDS in the v4 player, the following js file is required 
+		     Relace 4.3.3 with the latest version of the player -->
+		  <script src="//player.ooyala.com/static/v4/stable/4.3.3/video-plugin/osmf_flash.min.js"></script>
+		  <script src="//player.ooyala.com/static/v4/stable/4.3.3/video-plugin/bit_wrapper.min.js"></script>
+		  <script src="//player.ooyala.com/static/v4/stable/4.3.3/other-plugin/discovery_api.min.js"></script>
+		  <script src="//player.ooyala.com/static/v4/stable/4.3.3/skin-plugin/html5-skin.min.js"></script>
+		  <link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/4.3.3/skin-plugin/html5-skin.min.css"/>	
+	  </head>
+	<body style="font-family: arial,verdana,sans-serif;">
+		<h1>V4 Basic settings with HDS Stream</h1>
+		
+		<div id='container' style='width:640px;height:352px;'></div>
+		<div style="width:640px; background: aliceblue;">
+			<div style="width:600px; margin: 20px 20px 20px 20px;">
+		<h2>Features/Comments</h2>
+		<ul>
+			<li>HDS supported via a flash plugin - osmf_flash.min.js Flash plugin</li>
+		<li>A Live icon in the tool bar indicates this is a live stream</li>
+		<li>DRM not yet supported by v4</li>
+		<!--<li></li>
+		<li></li>
+		<li></li> -->
+		</ul>
+		<h2>Questions</h2>
+		<ul>
+			<li>Why is HDS not playable on some players/live streams?</li>
+		<li>What is configurable?</li>
+		<!-- <li></li>
+		<li></li>
+		<li></li>
+		<li></li> -->
+		</ul>
+		</div>
+		</div>
+		<script>
+			var playerParam = {
+				'pcode':'QxNWIyOnW__dbtfiaEqIuyAs0hcf', <!-- from your account -->
+				'playerBrandingId':'46916939be864f9c915b38e30276cb37', <!-- player id -->
+				 'encodingPriority': ["hds","hls", "dash", "mp4", "webm"], <!-- encoding priority order-->
+				'skin': {
+					'config': '//player.ooyala.com/static/v4/stable/4.3.3/skin-plugin/skin.json'
+					} 
+				};
+				OO.ready(function() {
+					window.pp = OO.Player.create(  <!-- div id and embed code -->
+								'container', 'w4YXRoMDE6e-1SJCEeb6mhkcWGGcmfn6', playerParam); 
+								
+				}); 
+		</script>
+		
+	</body>
+</html>
