@@ -5,7 +5,35 @@
     <title>WaterMark Demo </title>
 
     <!-- Load Ooyala Player -->
-    <script src='http://player.ooyala.com/v3/e18ab1da1813483499554ea2d8e67fbd'></script>
+    <script src='http://player.ooyala.com/v3/e8ba02d7f81a4bd1a24da6c3b744770c?platform=html'></script>
+
+
+ </head>
+
+  <body>
+    Watermark demo - Please adjust the opacity value for the element '#watermark' as needed. 
+
+    <!-- Watermark -->
+    <img id='watermark' src='ooyala.png'></img>
+
+    <!-- The DIV elements specify the layout for the content elements. -->
+    <div id='playerwrapper'></div>
+
+    <script>
+      // Surround everything with OO.ready to make sure the script has
+      // loaded and initialized.        
+      OO.ready(function() {
+        window.player = OO.Player.create(
+          'playerwrapper',
+          '14b2MzdjqAm5dlZb6Q6dhZ1YBSTnetzn', {
+            // add the embedded player parameters here
+            autoplay: true 
+          }
+        );
+      });
+
+    </script>
+
     <style text="text/css">
         #watermark{
             width:646px;
@@ -14,40 +42,17 @@
             top:143px;
             left:27px;
             z-index:1;
-            opacity:0.5;
+            opacity:0.6;
         }
         #playerwrapper{
+            width:640px;
+            height:360px;
             position:fixed;
             left:30px;
             top:30px;
             z-index:-1;
         }
     </style>
-
- </head>
-
-  <body>
-    Watermark demo - Please adjust the opacity value for the element # as needed. 
-
-    <!-- Watermark -->
-    <img id='watermark' src='ooyala.png'></img>
-
-    <!-- The DIV elements specify the layout for the content elements. -->
-    <div id='playerwrapper' style='width:680px;height:560px;'></div>
-
-    <script>
-      // Surround everything with OO.ready to make sure the script has
-      // loaded and initialized.        
-      OO.ready(function() {
-        window.player = OO.Player.create(
-          'playerwrapper',
-          '', {
-            // add the embedded player parameters here
-            autoplay: true 
-          }
-        );
-      });
-    </script>
   </body>
 </html>       
      

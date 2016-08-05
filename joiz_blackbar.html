@@ -1,13 +1,12 @@
-
 <!DOCTYPE html> 
 
-<script src="//player.ooyala.com/static/v4/stable/latest/core.min.js"></script>
-<script src="//player.ooyala.com/static/v4/stable/latest/video-plugin/main_html5.min.js"></script>
-<script src="//player.ooyala.com/static/v4/stable/latest/skin-plugin/html5-skin.min.js"></script>
-<script src="//player.ooyala.com/static/v4/stable/latest/video-plugin/osmf_flash.min.js"></script>
-<script src="//player.ooyala.com/static/v4/stable/4.2.14/video-plugin/bit_wrapper.min.js"></script>
-<script src="//player.ooyala.com/static/v4/stable/4.2.14/ad-plugin/ad_manager_vast.min.js"></script>
-<link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/latest/skin-plugin/html5-skin.min.css"/>
+<script src="//player.ooyala.com/static/v4/stable/4.3.3/core.min.js"></script>
+<!-- script src="//player.ooyala.com/static/v4/stable/4.3.3/video-plugin/main_html5.min.js"></script -->
+<script src="//player.ooyala.com/static/v4/stable/4.3.3/skin-plugin/html5-skin.min.js"></script>
+<script src="//player.ooyala.com/static/v4/stable/4.3.3/video-plugin/osmf_flash.min.js"></script>
+<!-- script src="//player.ooyala.com/static/v4/stable/4.3.3/video-plugin/bit_wrapper.min.js"></script -->
+<!-- script src="//player.ooyala.com/static/v4/stable/4.3.3/ad-plugin/ad_manager_vast.min.js"></script -->
+<link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/4.3.3/skin-plugin/html5-skin.min.css"/>
 
 
 <h1>Player V4 </h1>
@@ -16,15 +15,18 @@
 
 <script>      
 var playerParam2 = {'pcode':'1mY2MyOuigwFiX0AJgT3Res66Hmk',
-					'playerBrandingId':'884df1b4bb3845329d53bc83a3c16363',
-					'skin': {'config': '//player.ooyala.com/static/v4/stable/latest/skin-plugin/skin.json'} 
+					'playerBrandingId':'884df1b4bb3845329d53bc83a3c16363', 
+					'encodingPriority':["hds", "hls", "dash", "mp4", "webm"],
+					'skin': {'config': 'skin.json'}
 					};
 OO.ready(function() {window.pp = OO.Player.create('container2', 'IzaHNidTp-T1bOy6pYAFxWxdVLWo3pL2', playerParam2);}); 
 </script>
 
 
-<h1>Player V3 </h1>
-<iframe width="620" height="400" src="joiz_playerv3.html"></iframe>
+<!-- h1>Player V3 </h1>
+<iframe width="620" height="400" src="joiz_playerv3.html"></iframe IzaHNidTp-T1bOy6pYAFxWxdVLWo3pL2 -->
+
+
 
 
 

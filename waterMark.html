@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <TITLE>Watermark</TITLE>
@@ -17,9 +18,11 @@ OO.ready(function() {
             top:143px;
             left:27px;
             z-index:1;
-	    opacity:0.5;
+	        opacity:0.6;
         }
         #ooyalaplayer{
+            width:640px;
+            height:360px;
             position:fixed;
             left:30px;
             top:30px;
@@ -29,6 +32,6 @@ OO.ready(function() {
 </HEAD>
 <BODY>
 	<img id='watermark' src='ooyala.png'></img>
-	<div id='ooyalaplayer' style='width:640px;height:360px;position:absolute'>
+	<div id='ooyalaplayer'></div>
 </BODY>
 </HTML>

@@ -170,6 +170,11 @@
       "playedColor": "rgba(245,20,20,1)",
       "thumbnailPreview": true
     }
+    "volumeBar": {
+      "backgroundColor": "rgba(175,175,175,0.5)",
+      "bufferedColor": "rgba(175,175,175,0.7)",
+      "playedColor": "rgba(245,20,20,1)"
+    }    
   },
   "live": {
     "forceDvrDisabled": false

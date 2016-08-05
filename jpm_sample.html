@@ -54,43 +54,69 @@
 <!-- Player Placement -->
 <p>This is a test page for silk browser detection </p>
 
-<div id='ooyalaplayer' style='width:992px;height:558px'></div>
+<div class="content_cmg">
+    <div class="main_wrap">
+        <div class="web_broadcast_tier_1" style="height:765px;">
+            <div class="web_broadcast_video" style="height:765px;">
+                <div id='playerContainer' style='width:992px;height:558px'></div>
 
 
-<script type="text/javascript">
-
-
-              OO.ready(function() {
-
-
-                var ooyalaEmbedCode = 'BoaDIwMDE66mp_BSvbC4PizuW6cIfCYx';
-                var opts = {};
-
-                var playerConfiguration = {
-                    playlistsPlugin: {"data":["770933e118b943228fc4d963c6e04e1d"]},
-                    autoplay: false,
-                    loop: false,
-                    height: 765,
-                    width: 962,
-                    css: 'http://cdn.josephprince.org/web_broadcast/ooyala_player-1.css',
-                    useFirstVideoFromPlaylist: true,
-                    enableChannels: true
-                };
+                <script type="text/javascript">
 
  
-        	// Condition check for amazon silk browser 
-        	if (/\bSilk\b/.test(navigator.userAgent)) { 
+            	// Condition check for amazon silk browser 
+            	if (/\bSilk\b/.test(navigator.userAgent)) { 
 
-        	//Load the playerlist player 
-        	var player = pNoHook.Player.create('ooyalaplayer','', playerConfiguration); 
-        	}else{ 
 
-        	//Load the default player ,which is Hook enabled. 
-        	var player = pHook.Player.create('ooyalaplayer','', playerConfiguration); 
-            }
-        });
+                   pNoHook.ready(function() {
+                   var playerConfiguration = {
+                   playlistsPlugin: {"data":["770933e118b943228fc4d963c6e04e1d"]},
+                   autoplay: false,
+                   loop: false,
+                   height: 765,
+                   width: 962,
+                   css: 'http://cdn.josephprince.org/web_broadcast/ooyala_player-1.css',
+                   useFirstVideoFromPlaylist: true
+                   };
 
-</script>
+                   //Load the playerlist player 
+                   ooyalaPlayer = pNoHook.Player.create('playerContainer', '', playerConfiguration);
+                   console.log('playlist player is loaded');
+                   });    
+
+            	   }
+
+                else{ 
+
+                   pHook.ready(function() {
+                   var playerConfiguration = {
+                   playlistsPlugin: {"data":["770933e118b943228fc4d963c6e04e1d"]},
+                   autoplay: false,
+                   loop: false,
+                   height: 765,
+                   width: 962,
+                   css: 'http://cdn.josephprince.org/web_broadcast/ooyala_player-1.css',
+                   useFirstVideoFromPlaylist: true
+                   };
+
+                   //Load the playerlist player 
+                   ooyalaPlayer = pHook.Player.create('playerContainer', '', playerConfiguration);
+                   console.log('Default player is loaded');
+                   });    
+
+                   }
+
+                </script>
+
+                 <noscript>
+                   <div>Please enable Javascript to watch this video</div>
+                 </noscript>
+    </div>
+  </div>
+
+
+
+
 </body>
 </html>
 

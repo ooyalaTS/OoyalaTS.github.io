@@ -95,30 +95,25 @@
     };
 
  /// this will subscribe to ALL events
-window.messageBus.subscribe('*', 'example', 
+/*window.messageBus.subscribe('*', 'example', 
      function(eventName) {
     
        console.log("RECEIVED EVENT: player " +eventName + JSON.stringify(arguments) ,event ,arguments  );
-   });
+   });*/
 
-window.messageBus.subscribe('adsPlayed', 'example', 
+window.messageBus.subscribe('getCurrentBitrateInfo', 'example', 
      function(eventName) {
     
        console.log("RECEIVED EVENT: player " +eventName + JSON.stringify(arguments) );
-        window.messageBus.subscribe('playing', 'example', 
-           function(eventName) {
+
+   });
+
+window.messageBus.subscribe('bitrateChanged', 'example', 
+     function(eventName) {
     
-       console.log("RECEIVED EVENT: player subscribing to the content playing event "  );
-         window.messageBus.unsubscribe('playing', 'example' ); 
-              console.log("unsubscribe from play now " ); 
-
+       console.log("RECEIVED EVENT: player " +eventName + JSON.stringify(arguments) );
 
    });
-
-
-   });
-
-
 
 </script>
 </body>

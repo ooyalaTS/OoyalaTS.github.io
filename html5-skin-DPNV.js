@@ -1895,7 +1895,7 @@ var DiscoverItem = React.createClass({displayName: "DiscoverItem",
           ), 
           this.props.children
         ), 
-        React.createElement("div", {className: this.props.contentTitleClassName, dangerouslySetInnerHTML:this.props.contentTitle })
+        React.createElement("div", {className: this.props.contentTitleClassName, dangerouslySetInnerHTML: "<div>test</div>" })
       )
     );
   }

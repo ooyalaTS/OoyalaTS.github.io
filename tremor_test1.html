@@ -1,29 +1,24 @@
 <script src='//player.ooyala.com/v3/e8ba02d7f81a4bd1a24da6c3b744770c?platform=html5'></script>
 
 
-<div id='ooyalaplayer' style='width:1280px;height:720px'></div>
 
 
 <script>
-
 	OO.ready(function() { 
-		var videoPlayer = OO.Player.create('ooyalaplayer', '14b2MzdjqAm5dlZb6Q6dhZ1YBSTnetzn',
-			{'autoplay':true,
+		var testplay = OO.Player.create('testplayer', '14b2MzdjqAm5dlZb6Q6dhZ1YBSTnetzn',
+			{ 'autoplay':true,
 			  'height':'100%',
     		  'width':'100%',
-    		  'vast':{
-        		tagUrl: function() {
-        					console.log('######'+videoPlayer.clientWidth)
-							return 'http://testrurl';
-							}
-  				 }, 
 			}
 		); 
+
+		console.log("videoPlayer" + videoPlayer.getCurrentItem());
 	});
 
-	
-
 </script>
+
+<div id='testplayer' style='width:1280px;height:720px'></div>
+
 
 
 <noscript><div>Please enable Javascript to watch this video</div></noscript>
