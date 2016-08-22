@@ -1,0 +1,38 @@
+
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>V4 Ooyala Player Demo - HDS</title>
+		 <script src="//player.ooyala.com/static/v4/stable/4.4.8/core.min.js"></script>
+		  <!-- script src="//player.ooyala.com/static/v4/stable/4.4.8/video-plugin/main_html5.min.js"></script -->
+		  <!-- In order to play HDS in the v4 player, the following js file is required 
+		     Relace 4.4.8 with the latest version of the player -->
+		  <script src="//player.ooyala.com/static/v4/stable/4.4.8/video-plugin/osmf_flash.min.js"></script>
+		  <!-- script src="//player.ooyala.com/static/v4/stable/4.4.8/video-plugin/bit_wrapper.min.js"></script -->
+		  <!-- script src="//player.ooyala.com/static/v4/stable/4.4.8/other-plugin/discovery_api.min.js"></script -->
+		  <script src="html5-skin.js"></script>
+		  <link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/4.4.8/skin-plugin/html5-skin.min.css"/>	
+	  </head>
+	<body style="font-family: arial,verdana,sans-serif;">
+		<h1>To find out if HDS Access Stream plays in v4</h1>
+		
+		<div id='container' style='width:640px;height:352px;'></div>
+		<script>
+			var playerParam = {
+				'pcode':'owMjgyOkSbJagb4ozVY_03UrHYLt', <!-- from your account -->
+				'playerBrandingId':'2f7f32a4e6d24d8fb3b5c8f28535b866', <!-- player id -->
+				 'encodingPriority': ["hds","hls", "dash", "mp4", "webm"], <!-- encoding priority order-->
+				 'embedToken':'http://player.ooyala.com/sas/embed_token/owMjgyOkSbJagb4ozVY_03UrHYLt/pzd25ncDrOIsgVMpx9t7VAb_eFearShh?account_id=1116294680d04424eade0c6bf209b30f0&api_key=owMjgyOkSbJagb4ozVY_03UrHYLt.IwIyt&country=ALL&expires=1496286630&signature=RTkK8GG0I1EVQXtQYDRjpvZhrKcJgefoHxiHxag/0f0&override_syndication_group=override_synd_groups_in_backlot',
+				'skin': {
+					'config': '//player.ooyala.com/static/v4/stable/4.4.8/skin-plugin/skin.json'
+					} 
+				};
+				OO.ready(function() {
+					window.pp = OO.Player.create(  <!-- div id and embed code -->
+								'container', 'pzd25ncDrOIsgVMpx9t7VAb_eFearShh', playerParam); 
+								
+				}); 
+		</script>
+		
+	</body>
+</html>
