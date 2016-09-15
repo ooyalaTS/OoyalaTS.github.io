@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Penfolds</title>
+			<script src="//player.ooyala.com/static/v4/stable/4.6.9/core.min.js"></script>
+			<script src="//player.ooyala.com/static/v4/stable/4.6.9/video-plugin/main_html5.min.js"></script>
+			<script src="//player.ooyala.com/static/v4/stable/4.6.9/skin-plugin/html5-skin.min.js"></script>
+			<script src="//player.ooyala.com/static/v4/stable/4.6.9/video-plugin/bit_wrapper.min.js"></script>
+			<script src="//player.ooyala.com/static/v4/stable/4.6.9/video-plugin/osmf_flash.min.js"></script>
+			<link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/4.6.9/skin-plugin/html5-skin.min.css" />
+	  </head>
+	<body style="font-family: arial,verdana,sans-serif;">
+		<h1>Player Branding Test</h1>
+		
+		<div class="ooyala widget">
+		    <div class="video-wrapper clearfix">
+		        <div id='oolyala-container' class=""></div>
+		    </div>
+		</div>
+		</div>
+		<script>
+			    var playerParam = {
+			        'pcode': 'd3d2gyOoqTUms35490L_j8EfluUr',
+			        'playerBrandingId': '8dc8872104674795adeafa6ad053bb95',
+			        'autoplay': true, 
+			        'loop': false,
+			        //'initialBitrate': {'level': 0.9,'duration': 30}, 
+			        'skin': { 'config': 'penfolds-skin.json' }
+			    };
+			    OO.ready(function () {
+			        window.pp = OO.Player.create('oolyala-container', 'wzaWNzNTE695VcJfftnHoeF-R7x7ytxc', playerParam);
+			    });
+		</script>
+		
+	</body>
+</html>
