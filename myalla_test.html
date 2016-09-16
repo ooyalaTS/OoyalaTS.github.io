@@ -1,0 +1,67 @@
+
+<!DOCTYPE html> <!-- html5 web page -->
+	<head>
+		<title>V4 Ooyala Player Demo</title>
+<!-- Initialise Player and Load Plugins
+Minimum Requirements
+	- core.min.js
+	- at least one video plugin
+	- files for player skin :
+		- main_html5.min.js
+		- html5-skin.min.js
+		- html5-skin.min.css
+	- additional plugins for eg ads, discovery
+-->
+
+	  <script src="http://player.ooyala.com/static/v4/stable/4.7.9/core.min.js"></script>
+		  <script src="http://player.ooyala.com/static/v4/stable/4.7.9/video-plugin/main_html5.min.js"></script>
+		  <!-- In order to play HDS in the v4 player, the following js file is required 
+		   
+	<script src="//player.ooyala.com/static/v4/stable/4.7.8/video-plugin/osmf_flash.min.js"></script> -->
+		  <script src="http://player.ooyala.com/static/v4/stable/4.7.9/video-plugin/bit_wrapper.min.js"></script>
+		 <!-- <script src="//player.ooyala.com/static/v4/stable/4.7.9/other-plugin/discovery_api.min.js"></script> -->
+		  <script src="http://player.ooyala.com/static/v4/stable/4.7.9/skin-plugin/html5-skin.min.js"></script>
+		  <link rel="stylesheet" href="http://player.ooyala.com/static/v4/stable/4.7.9/skin-plugin/html5-skin.min.css"/>	
+
+	</head>
+	<body>	
+		<h2>Testing plugins for Sky News Test Account</h2>
+		<!-- Set up Player Container within body -->
+		<ul>
+		<li>This page has the bitwrapper and main_html5 video plugins only -no encoding priority</li>
+		<li>Discovery is turned off</li>
+		<li>As the player is restricted to 320 x 228 px only some controls show</li>
+		<li>Note that the right most control provides access to additional controls</li>
+		<li>In full screen, all controls show on the control bar</li>
+		</ul>
+		
+		<!-- Set up Player Container within body -->
+		
+		<div id='container' style='width:320px;height:288px;'></div>
+		<!-- Include script tag to 
+			create player, 
+			associate video
+			include additional parameters
+			-->
+			
+		<script>
+		
+			var playerParam = {
+				'pcode':'o3d28xOpL3fgNCkFD9vU_szNGE1M',
+				'playerBrandingId':'38915bbbd5b5406688f79dd33aea7f4e',
+				'debug': 'true',
+			//	'encodingPriority': ["hls", "dash", "mp4", "hds", "webm"], <!-- encoding priority order-->
+				'skin': { 
+						'config': 'http://player.ooyala.com/static/v4/stable/4.7.9/skin-plugin/skin.json' 
+					} 
+				};
+				
+				OO.ready(function() {
+					window.pp = OO.Player.create(
+								'container', 'thYWtqNTE6SPs1O3Lwf3W49Y_vzBWbFW', playerParam); 
+				}); 
+		</script>
+		
+		
+	</body>
+</html>
