@@ -1,0 +1,41 @@
+
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>V4 Ooyala Player Demo - Dash</title>
+		 <script src="//player.ooyala.com/static/v4/stable/4.7.8/core.min.js"></script>
+		  <script src="//player.ooyala.com/static/v4/stable/4.7.8/video-plugin/main_html5.min.js"></script>
+		  <!-- In order to play HDS in the v4 player, the following js file is required 
+		     Relace 4.4.8 with the latest version of the player -->
+		  <!-- script src="//player.ooyala.com/static/v4/stable/4.7.9/video-plugin/osmf_flash.min.js"></script -->
+		  <script src="//player.ooyala.com/static/v4/stable/4.7.8/video-plugin/bit_wrapper.min.js"></script>
+		  <!-- script src="//player.ooyala.com/static/v4/stable/4.4.8/other-plugin/discovery_api.min.js"></script -->
+		  <script src="html5-skin.js"></script>
+		  <link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/4.7.8/skin-plugin/html5-skin.min.css"/>	
+	  </head>
+	<body style="font-family: arial,verdana,sans-serif;">
+		<h1>V4 - original live stream- HLS Playback</h1>
+		
+		<div id='container' style='width:640px;height:352px;'></div>
+		<div style="width:640px; background: aliceblue;">
+		</div>
+		<script>
+			var playerParam = {
+				'pcode':'Zha2IxOrpV-sPLqnCop1Lz0fZ5Gi', <!-- from your account -->
+				'playerBrandingId':'89a379a0e1e94feca5bb87c46a8b2d5e', <!-- player id -->
+				 'encodingPriority': ["hls", "hds", "dash", "mp4", "webm"], <!-- encoding priority order-->
+				 'platform':'html5',
+				 'embedToken':'http://player.ooyala.com/sas/embed_token/Zha2IxOrpV-sPLqnCop1Lz0fZ5Gi/1yNGE5dDoyTdUKykqSeTysvmgup-rvS1?api_key=Zha2IxOrpV-sPLqnCop1Lz0fZ5Gi.Gq2TW&country=US&expires=1496286630&signature=HykVsUQLLosmBMvokYWuT1LYAyYDYrz4TpjYui0mdz8&override_syndication_group=override_synd_groups_in_backlot',
+				'skin': {
+					'config': '//player.ooyala.com/static/v4/stable/4.7.8/skin-plugin/skin.json'
+					} 
+				};
+				OO.ready(function() {
+					window.pp = OO.Player.create(  <!-- div id and embed code -->
+								'container', '1yNGE5dDoyTdUKykqSeTysvmgup-rvS1', playerParam); 
+								
+				}); 
+		</script>
+		
+	</body>
+</html>
