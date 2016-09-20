@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>V4 Ooyala Player Demo - Initial bitrate</title>
+	    <script src="//player.ooyala.com/static/v4/stable/4.4.11/core.min.js"></script>
+	    <script src="//player.ooyala.com/static/v4/stable/4.4.11/video-plugin/main_html5.min.js"></script>
+	    <script src="//player.ooyala.com/static/v4/stable/4.6.9/ad-plugin/ad_manager_vast.min.js"></script>
+	    <script src="//player.ooyala.com/static/v4/stable/4.4.11/video-plugin/bit_wrapper.min.js"></script>
+	    <script src="//player.ooyala.com/static/v4/stable/4.4.11/other-plugin/discovery_api.min.js"></script>
+	    <script src="//player.ooyala.com/static/v4/stable/4.4.11/skin-plugin/html5-skin.min.js"></script>
+	    <link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/4.4.11/skin-plugin/html5-skin.min.css" />
+        <link rel="stylesheet" href="//data.coastalwatch.com/css/ooyala-cw.css" />
+
+	  </head>
+	<body style="font-family: arial,verdana,sans-serif;">
+		<h1>V4 - Initial Bitrate stays at maximum for 30 seconds</h1>
+		
+		<div id='container0' style='width:640px;height:352px;'></div>
+		<div style="width:640px; background: aliceblue;">
+		</div>
+		<script>
+			var playerParam = {
+				'pcode':'4yNG06lHmxrgchC0p_my998ksFVG', <!-- from your account -->
+				'playerBrandingId':'ZTY5NWQ5NDQ5YjQ0OTk2ODY2ODJhMjgx', <!-- player id -->
+                'debug':true,
+                'autoplay': true,
+                'initialBitrate' :{"level": 1 ,"duration": 30},
+				'skin': {
+					'config': '//data.coastalwatch.com/json/ooyalacwvodskin.json'
+					} 
+				};
+				OO.ready(function() {
+					window.pp = OO.Player.create('container0', 'ZlOHZ3NTE666ONWC3j2rZbW-5byhfQnR', playerParam); 							
+				}); 
+		</script>
+		
+	</body>
+</html>
