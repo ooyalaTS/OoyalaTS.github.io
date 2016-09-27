@@ -1,0 +1,39 @@
+
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>V4 Ooyala Player Demo - HLS</title>
+		 <script src="//player.ooyala.com/static/v4/stable/4.7.9/core.min.js"></script>
+		  <script src="//player.ooyala.com/static/v4/stable/4.7.9/video-plugin/main_html5.min.js"></script>
+		  <!-- In order to play HDS in the v4 player, the following js file is required 
+		     Relace 4.7.9 with the latest version of the player -->
+		  <!-- script src="//player.ooyala.com/static/v4/stable/4.7.9/video-plugin/osmf_flash.min.js"></script-->
+		  <script src="//player.ooyala.com/static/v4/stable/4.7.9/video-plugin/bit_wrapper.min.js"></script>
+		  <script src="//player.ooyala.com/static/v4/stable/4.7.9/other-plugin/discovery_api.min.js"></script>
+		  <script src="html5-skin.js"></script>
+		  <link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/4.7.9/skin-plugin/html5-skin.min.css"/>	
+	  </head>
+	<body style="font-family: arial,verdana,sans-serif;">
+		<h1>V4 - HLS Priority</h1>
+		
+		<div id='container' style='width:640px;height:352px;'></div>
+		<div style="width:640px; background: aliceblue;">
+		</div>
+		<script>
+			var playerParam = {
+				'pcode':'pqbGgyOj-tv4K69vll_JtkbifnQi', <!-- from your account -->
+				'playerBrandingId':'b04ce581d4e8499ca83b80f05cceac0e', <!-- player id -->
+				 'encodingPriority': ["hls","hds", "dash", "mp4", "webm"], <!-- encoding priority order-->
+				'skin': {
+					'config': '//player.ooyala.com/static/v4/stable/4.7.9/skin-plugin/skin.json'
+					} 
+				};
+				OO.ready(function() {
+					window.pp = OO.Player.create(  <!-- div id and embed code -->
+								'container', 'p2dTU0NjE6QULjazG_b5-18iTd1vdiqM', playerParam); 
+								
+				}); 
+		</script>
+		
+	</body>
+</html>
