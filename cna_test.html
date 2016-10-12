@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<div class="cnalivestream_container">
+<script src="//player.ooyala.com/static/v4/stable/4.6.9/core.min.js"></script>
+<script src="//player.ooyala.com/static/v4/stable/4.6.9/video-plugin/main_html5.min.js"></script>
+<script src="//player.ooyala.com/static/v4/stable/4.6.9/skin-plugin/html5-skin.min.js"></script>
+<script src="//player.ooyala.com/static/v4/stable/4.6.9/video-plugin/bit_wrapper.min.js"></script>
+<!-- script src="//player.ooyala.com/static/v4/stable/4.6.9/video-plugin/osmf_flash.min.js"></script -->
+<script src="http://b.scorecardresearch.com/c2/plugins/streamingtag_plugin_ooyalav4.js"></script>
+
+<link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/4.6.9/skin-plugin/html5-skin.min.css" />
+
+<style type='text/css'>
+  .oo-embed-tab {display: none !important;}
+.oo-state-screen-title{display:none!important;}
+.oo-state-screen-description{display:none!important;}
+.oo-player-container{min-width:300px;}
+.embed-container{padding-bottom:10px;}
+#ooyalaplayer{width:320px;height:300px;}
+</style>
+
+<div id='cnalive_container' style="width:300px;height:300px;"></div>
+
+<script>
+function omniInitMediaTracking(mediaName,mediaLength,playerName) {
+s.Media.open(mediaName,mediaLength,playerName);
+s.Media.play(mediaName,0);
+}
+
+function omniMediaTrackingStop(mediaName,mediaPosition) {
+s.Media.stop(mediaName,mediaPosition);
+}
+
+function omniMediaTrackingResume(mediaName,mediaPosition) {
+s.Media.play(mediaName,mediaPosition);
+}
+
+function omniMediaTrackingDone(mediaName,mediaPosition) {
+s.Media.stop(mediaName,mediaPosition);
+s.Media.close(mediaName);
+}
+
+var currentTime = '';
+var stopped = false;
+var videoID = "ljM2Q1NTE6q6-4-FqzrSmB7ni8qO2JYM";
+var videoTitle = "CNA Live";
+var videoDuration = "";
+var rootUrlSgement = "tv";
+var cnaGfK =
+{
+"contentId" : "LiveStream",
+"cp" : {
+"cp1" : "3",
+"cp2" : videoID,
+"cp3" : videoTitle,
+"cp4" : videoDuration,
+"cp5" : "null",
+"cp6" : "null",
+"cp7" : "null",
+"cp8" : "null",
+"cp9" : "null",
+"cp10" : "0",
+"cp11" : "0",
+"cp12" : window.location.href,
+"cp13" : "en",
+"cp14" : "null",
+"cp15" : "Channel NewsAsia",
+"cp16" : "null",
+"cp17" : "null"
+}
+};
+
+var gfkSsaConf = {"media": "someMediaId","url": "//sg-config.sensic.net/sg1-ssa-w.js", "debug": 0};( function (w, d, c, s, id) {if (d.getElementById(id)) {return;}w["gfk"] = w["gfk"] || {};w["gfk"]["ssa"] = w["gfk"]["ssa"] || {};w["gfk"]["ssa"].agents = w["gfk"]["ssa"].agents || [];w["gfk"]["ssa"].getAgent = function() {var agent = { "queue": [], "a": arguments };agent.notifyLoaded = function() {agent.queue.push({"f": "notifyLoaded","t": new Date().getTime(),"a": arguments});};agent.notifyPlay = function() {agent.queue.push({"f": "notifyPlay","t": new Date().getTime(), "a": arguments});};agent.notifyIdle = function() {agent.queue.push({"f": "notifyIdle","t": new Date().getTime(),"a": arguments});};agent.notifySkipped = function() {agent.queue.push({"f": "notifySkipped","t": new Date().getTime(), "a": arguments});};w["gfk"]["ssa"].agents.push(agent);return agent;};var tag = d.createElement(s);var el = d.getElementsByTagName(s)[0];tag.id = id;tag.async = true;tag.type = 'text/javascript';tag.src = c.url;el.parentNode.insertBefore(tag, el);})(window, document, gfkSsaConf, 'script', 'gfkSsa');
+
+var cnaAgent = gfk.ssa.getAgent("ChannelNewsAsiaWeb");
+ 
+var playerParam = {
+'pcode': 'hidm4xOtnoc0OwWaDZnM4-sJ0A0r',
+'playerBrandingId': '852bbc1e3cd74e809104dd9b3531db14',
+'autoplay': false,
+'loop': false,
+'encodingPriority': ["hls","hds", "dash", "mp4", "webm"], 
+'platform': 'html5',
+'skin': {
+     'config': 'cna_skin.json'
+},
+'ComScoreOoyalaPlugin': {
+    'c2': '6154803',
+    'labelmapping': 'c6="*null", ns_st_st="Channel NewsAsia", ns_st_pu="Mediacorp", ns_st_pr="*null", ns_st_ep="*null", ns_st_sn="*null", ns_st_en="*null", ns_st_ge="*null", ns_st_ti="*null", ns_st_ia="0", ns_st_ce="0", ns_st_ddt="2016-09-10", ns_st_tdt="2016-08-10"'
+},
+"onCreate": function(player) {
+player.mb.subscribe("*", "myPage", function(eventName) {
+     if (eventName == OO.EVENTS.PLAYHEAD_TIME_CHANGED) {
+        currentTime = arguments[1];
+      }
+      if (eventName == OO.EVENTS.PLAYBACK_READY) {
+        cnaAgent.notifyLoaded(cnaGfK.contentId, cnaGfK.cp);
+      }
+      else if (eventName == 'willPlayFromBeginning') {
+  omniInitMediaTracking(rootUrlSgement+'_'+videoTitle,videoDuration,rootUrlSgement+'_OoyalaPlayer');
+      }
+      else if (eventName == OO.EVENTS.PLAYING) {
+        cnaAgent.notifyPlay();
+        if (stopped) {
+            omniMediaTrackingResume(rootUrlSgement+'_'+videoTitle,parseInt(currentTime));
+            stopped = false;
+         }
+       }
+else if (eventName == OO.EVENTS.WILL_PLAY_ADS) {
+cnaAgent.notifyIdle();
+}
+else if (eventName == OO.EVENTS.BUFFERING) {
+cnaAgent.notifyIdle();
+}
+else if (eventName == OO.EVENTS.PAUSED) {
+cnaAgent.notifyIdle();
+omniMediaTrackingStop(rootUrlSgement+'_'+videoTitle,parseInt(currentTime));
+stopped = true;
+}
+else if (eventName == OO.EVENTS.PLAYED) {
+cnaAgent.notifyIdle();
+omniMediaTrackingDone(rootUrlSgement+'_'+videoTitle,parseInt(currentTime));
+}
+ 
+});
+}
+};
+
+OO.ready(function() {
+window.pp = OO.Player.create('cnalive_container', 'ljM2Q1NTE6q6-4-FqzrSmB7ni8qO2JYM', playerParam);
+});
+</script>
+</div>
