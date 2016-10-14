@@ -1,0 +1,46 @@
+
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>V4 Ooyala Player Demo - GA</title>
+			<script src="//player.ooyala.com/static/v4/stable/4.8.5/core.min.js"></script>
+			<script src="//player.ooyala.com/static/v4/stable/4.8.5/video-plugin/main_html5.min.js"></script>
+		    <script src="//player.ooyala.com/static/v4/stable/4.8.5/skin-plugin/html5-skin.js"></script>
+		    <link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/4.8.5/skin-plugin/html5-skin.min.css"/>
+		    <script src="//player.ooyala.com/static/v4/stable/4.8.5/analytics-plugin/googleAnalytics.min.js"></script>	
+	  </head>
+	<body style="font-family: arial,verdana,sans-serif;">
+		<h1>V4 - GA Events testing</h1>
+		
+		<div id='container' style='width:836px;height:418px;'></div>
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-46560427-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/u/ga_debug.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>		
+		<script>
+			var playerParam = {
+		        'pcode': 'VhcWgyOqwVLoJMxMfJbZFx8b0mCj',
+		        'playerBrandingId': '40c8bda1c1d047438559f62b3451ff4c',
+		        'autoplay': true, 
+		        'loop': false,
+		        'initialBitrate': {'level': 1,'duration': 30}, 
+		        'debug' : true,
+				'skin': {
+					'config': '//player.ooyala.com/static/v4/stable/4.8.5/skin-plugin/skin.json'
+					} 
+				};
+				OO.ready(function() {
+					window.pp = OO.Player.create('container', 'Z2NGI4NjE6pyFMoQHCRs7ZX6yCMp7luf', playerParam); 
+								
+				}); 
+		</script>
+		
+	</body>
+</html>
