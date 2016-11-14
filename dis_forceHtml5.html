@@ -1,0 +1,74 @@
+
+<!DOCTYPE html> <!-- html5 web page -->
+	<head>
+		<title>V4 Ooyala Player Demo</title>
+<!-- Initialise Player and Load Plugins
+Minimum Requirements
+	- core.min.js
+	- at least one video plugin
+	- files for player skin :
+		- main_html5.min.js
+		- html5-skin.min.js
+		- html5-skin.min.css
+	- additional plugins for eg ads, discovery
+-->
+	<!-- Include for Lato Font if not hosting files -->
+	  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'/>
+	  <script src="http://player.ooyala.com/static/v4/stable/4.8.5/core.min.js"></script>
+		  <script src="http://player.ooyala.com/static/v4/stable/4.8.5/video-plugin/main_html5.min.js"></script>
+		  <!-- In order to play HDS in the v4 player, the following js file is required 
+		   
+	<script src="//player.ooyala.com/static/v4/stable/4.7.8/video-plugin/osmf_flash.min.js"></script> -->
+		 <script src="http://player.ooyala.com/static/v4/stable/4.8.5/video-plugin/bit_wrapper.min.js"></script>
+		<script src="//player.ooyala.com/static/v4/stable/4.8.5/other-plugin/discovery_api.min.js"></script>
+		  <script src="http://player.ooyala.com/static/v4/stable/4.8.5/skin-plugin/html5-skin.min.js"></script>
+		  <link rel="stylesheet" href="http://player.ooyala.com/static/v4/stable/4.8.5/skin-plugin/html5-skin.min.css"/>
+  <link rel="stylesheet" href="css/custom.css"/>
+	</head>
+	<body>	
+		<h2>Testing flash free playback</h2>
+		<!-- Set up Player Container within body -->
+		<ul>
+		
+		
+		<p>When the flash is enabled & platform :html5 player parameter is set,</p>
+		<p>then the player shouldn't use the flash component from browser</p>
+		<p>the playback of the first video is fine.</p>		
+		<p>But when i select a video from discovery recommendations,</p>
+		<p>chrome is detecting the player as a flash content and overlays (because the player size is small)</p>
+		
+		</ul>
+		
+		<!-- Set up Player Container within body -->
+		<h3>Player size of sticky</h3>
+		<div id='container' style="width:340px;height:190px"></div>
+		<!-- Include script tag to 
+			create player, 
+			associate video
+			include additional parameters
+			-->
+			
+		<script>
+		
+			var playerParam = {
+				'pcode':'o3d28xOpL3fgNCkFD9vU_szNGE1M',
+				'playerBrandingId':'38915bbbd5b5406688f79dd33aea7f4e',
+				'debug': 'true',
+				'platform':'html5',
+			//	'encodingPriority': ["hls", "dash", "mp4", "hds", "webm"], <!-- encoding priority order-->
+			
+				
+					
+				'skin': { 
+						'config': 'http://player.ooyala.com/static/v4/stable/4.8.5/skin-plugin/skin.json' 
+					}
+				};
+				
+				OO.ready(function() {
+					window.pp = OO.Player.create(
+								'container', 'x2dXEyNzE6edzyBWDgDpMMczgHZ67LxD', playerParam); 
+				}); 
+		</script>
+		
+	</body>
+</html>
