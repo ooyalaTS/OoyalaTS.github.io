@@ -1,0 +1,65 @@
+
+<!DOCTYPE html> <!-- html5 web page -->
+	<head>
+		<title>V4 Ooyala Player Base using 4.8.5</title>
+
+		
+		<script src="//player.ooyala.com/static/v4/stable/4.8.5/core.min.js"></script>
+		<script src="//player.ooyala.com/static/v4/stable/4.8.5/video-plugin/main_html5.min.js">
+		</script> 
+		<script src="//player.ooyala.com/static/v4/stable/4.8.5/skin-plugin/html5-skin.min.js">
+		</script>
+		<!-- script src="//ooyalats.github.io/html5-skin-test.js" -->
+		</script>
+		
+		<script src="//player.ooyala.com/static/v4/stable/4.8.5/video-plugin/bit_wrapper.min.js">
+		</script>
+	
+		
+		<!-- In order to enable Discovery in the v4 player, the following js file is required 
+		     Relace 4.4.8 with the latest version of the player -->
+	
+		<script src="//player.ooyala.com/static/v4/stable/4.8.5/other-plugin/discovery_api.min.js"></script>
+	
+		<!-- To use google IMA need following plugin -->
+		<script src="//player.ooyala.com/static/v4/stable/4.8.5/ad-plugin/google_ima.min.js"></script>
+		 <link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/4.8.5/skin-plugin/html5-skin.min.css"/>
+		  <link rel="stylesheet" href="css/custom.css"/>
+	</head>
+	<body>
+	<h2>Base player for test purposes </h2>
+	
+		<!-- Set up Player Container within body -->
+		<div id='container' style='width:600px;height:400px;'></div>
+		<!-- Include script tag to 
+			create player, 
+			associate video
+			include additional parameters
+			-->
+			
+		<script>
+		
+			var playerParam = {
+				'pcode':'81d28xOpaRxYccNVPgnMbq7Cvdhg',
+				'playerBrandingId':'e8b7ef158daf41729b3e61ae3b1845a3',
+				'platform': 'html5',
+				'debug': 'true',
+				//'google-ima-ads-manager': {
+				//	'useGoogleCountdown': true <!--shows countdown and Learn More -->
+				//},
+				'skin': {
+					'config': 'http://myalla.b-elab.com/Sky/v4/stable/4.8.5/skin-plugin/skin.json'
+					} //,
+					<!-- adSetCode: '6d786bf13c734d99aa2a496c87fc1d20' -->
+					//adSetCode: '710608a0c64e4de091327f7923e128e1'
+					
+				};
+				OO.ready(function() {
+					window.pp = OO.Player.create(
+								'container', 'JpYWVzNjE6A01zQnJpK4LiabQrWCfCzM', playerParam); 
+				}); 
+		</script>
+		
+		
+	</body>
+</html>
