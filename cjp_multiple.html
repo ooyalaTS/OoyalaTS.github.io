@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+  <title>
+    CJP - Multiple player
+  </title>
+  <head>
+  
+    <!-- V4 JS core and at least one video plugin is required. Plugins such as skin, discovery and Advertising need to be loaded separately -->
+      <script src="https://player.ooyala.com/static/v4/stable/latest/core.min.js"></script>
+      <script src="https://player.ooyala.com/static/v4/stable/latest/video-plugin/bit_wrapper.min.js"></script>
+      <script src="https://player.ooyala.com/static/v4/stable/latest/video-plugin/main_html5.min.js"></script>
+      <script src="https://player.ooyala.com/static/v4/stable/latest/skin-plugin/html5-skin.min.js"></script>
+      <link rel="stylesheet" href="https://player.ooyala.com/static/v4/stable/latest/skin-plugin/html5-skin.min.css"/>
+  </head>
+  <body>
+    <div id='container' style='width:640px; height:360px;'></div>
+    </br>
+    <div id='container2' style='width:640px; height:360px;'></div>
+
+    <script>
+      var playerParam1 = {
+        "pcode": "UzM2oyOhgtCq_z4DZDUqQadISueB",
+        "playerBrandingId": "aa4c97a1795640648a033c3f89858fce",
+        "debug":true,
+        "namespace":"OO1",
+		"skin": {
+      		"config": "https://player.ooyala.com/static/v4/stable/latest/skin-plugin/skin.json"
+    	}
+      };
+     // var namespace = OO1;
+      var video1=OO.ready(function() {
+        OO.Player.create('container', 's3MTk3YjE6RD85_O3MCDpyu2jS2IYiPQ', playerParam1);
+      });
+    </script>
+
+  </body>
+  <script>
+      var playerParam2 = {
+        "pcode": "UzM2oyOhgtCq_z4DZDUqQadISueB",
+        "playerBrandingId": "aa4c97a1795640648a033c3f89858fce",
+        "debug":true,
+        "namespace":"OO2",
+		"skin": {
+      		"config": "https://player.ooyala.com/static/v4/stable/latest/skin-plugin/skin.json",
+    	}                  
+      };
+      var video2=OO.ready(function() {      		
+
+        OO.Player.create('container2', 's3MTk3YjE6RD85_O3MCDpyu2jS2IYiPQ', playerParam2);
+      });
+    </script>
+  </body>
+  <footer>
+    
+  </footer>
+</html>
