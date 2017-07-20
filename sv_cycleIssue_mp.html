@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>V4 Demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="//player.ooyala.com/static/v4/production/latest/core.min.js"></script>
+  <script src="//player.ooyala.com/static/v4/production/latest/video-plugin/main_html5.min.js"></script>
+  <!--<script src="//player.ooyala.com/static/v4/production/latest/video-plugin/osmf_flash.min.js"></script>-->
+  <script src="//player.ooyala.com/static/v4/production/latest/video-plugin/bit_wrapper.min.js"></script>
+  <script src="//player.ooyala.com/static/v4/production/latest/skin-plugin/html5-skin.js"></script>
+  <link rel="stylesheet" href="//player.ooyala.com/static/v4/production/latest/skin-plugin/html5-skin.min.css">
+</head>
+
+<body>
+<h2>V4 Demo</h2>
+<div id="container" style="width:640px;height:360px"></div>
+<script>
+  function getOffsetSeconds() {
+    var curr = new Date();
+    var point = new Date('Jul 19 2017 10:57:00 GMT+0900'); // when the issue occurred
+    return (curr.getTime() - point.getTime()) / 1000;
+  }
+
+  var playerParam = {
+    pcode: 'owMjgyOkSbJagb4ozVY_03UrHYLt',
+    playerBrandingId: 'dde0012b6dcc4dc7b26306bdaff0dce2',
+    debug:true,
+    onCreate: function (player) {
+      player.mb.subscribe(OO.EVENTS.PLAYHEAD_TIME_CHANGED, 'app', function cb(_, curr) {
+        player.mb.unsubscribe(OO.EVENTS.PLAYHEAD_TIME_CHANGED, 'app', cb);
+        player.seek(curr - getOffsetSeconds());
+      });
+    }
+  };
+  OO.ready(function() {
+    window.pp = OO.Player.create('container', 'd3YWtjYjE631vZBzUU77Oe3KUDHmSnkO', playerParam);
+  });
+</script>
+
+</body>
+</html>
