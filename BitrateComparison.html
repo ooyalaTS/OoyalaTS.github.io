@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Ooyala</title>
+		 <script src="//player.ooyala.com/static/v4/production/core.min.js"></script>
+		  <script src="//player.ooyala.com/static/v4/production/video-plugin/main_html5.min.js"></script>
+		  <!-- In order to play HDS in the v4 player, the following js file is required 
+		     Relace 4.4.8 with the latest version of the player -->
+		  <script src="//player.ooyala.com/static/v4/production/video-plugin/bit_wrapper.min.js"></script>
+		  <script src="//player.ooyala.com/static/v4/production/skin-plugin/html5-skin.min.js"></script>
+		  <link rel="stylesheet" href="//player.ooyala.com/static/v4/production/skin-plugin/html5-skin.min.css"/>	
+	  </head>
+	<body style="font-family: arial,verdana,sans-serif;">
+		<h1>Bitrate comparison</h1>
+		
+<table style="width:50%">
+  <tr>
+    <th>Resolution</th>
+    <th>Video Bitrate</th> 
+    <th>Audio Bitrate</th>
+  </tr>
+  <tr>
+    <td>704 x 396</td>
+    <td>400</td> 
+    <td>AAC 96kbps</td>
+  </tr>
+  <tr>
+	<td>768 x 432</td>
+	<td>800</td>			
+	<td>AAC 96kbps</td>
+  </tr>
+  <tr>
+	<td>1278 x 719</td>	
+	<td>1200</td>			
+	<td>AAC 128kbps</td>
+  </tr>
+  <tr>
+	<td>1278 x 719</td>	
+	<td>1500</td>		
+	<td>AAC 128kbps</td>
+  </tr>    
+</table>
+
+
+		<div id='container1' style='width:640px;height:352px;'></div>
+		<div style='width:640px;height:50px;'></div>
+		<script>
+			var playerParam1 = {
+				'pcode':'BvaTkyOonHxxioyLq4sycIINGXKH', <!-- from your account -->
+				'playerBrandingId':'1e36243a94d54e5d9da5f39a667020d3', <!-- player id -->
+				 //'encodingPriority': ["hds","hls", "dash", "mp4", "webm"], <!-- encoding priority order-->
+				'embedToken':'http://player.ooyala.com/sas/embed_token/BvaTkyOonHxxioyLq4sycIINGXKH/g4OGdvYzE6fh4ah3BqAhFdVcfnvZCqxP?account_id=bb09b69431a74328b63dd583fee318fc&api_key=BvaTkyOonHxxioyLq4sycIINGXKH.sMgw1&country=ALL&expires=1529565288&signature=EDH9B2oBJdx+9yrk3+ENhZ1vEcShEyF2z2hFGAAPPMs&override_syndication_group=override_all_synd_groups',				 
+				'skin': {
+					'config': '//player.ooyala.com/static/v4/production/skin-plugin/skin.json'
+					} 
+				};
+				OO.ready(function() {
+					window.pp = OO.Player.create(  <!-- div id and embed code -->
+								'container1', 'g4OGdvYzE6fh4ah3BqAhFdVcfnvZCqxP', playerParam1); 
+								
+				}); 
+		</script>
+
+<table style="width:50%">
+  <tr>
+    <th>Resolution</th>
+    <th>Video Bitrate</th> 
+    <th>Audio Bitrate</th>
+  </tr>
+  <tr>
+    <td>704 x 396</td>
+    <td>400</td> 
+    <td>AAC 48kbps</td>
+  </tr>
+  <tr>
+	<td>768 x 432</td>
+	<td>800</td>			
+	<td>AAC 48kbps</td>
+  </tr>
+  <tr>
+	<td>1278 x 719</td>	
+	<td>1200</td>			
+	<td>AAC 64kbps</td>
+  </tr>
+  <tr>
+	<td>1278 x 719</td>	
+	<td>1500</td>		
+	<td>AAC 64kbps</td>
+  </tr>    
+</table>
+
+
+		<div id='container2' style='width:640px;height:352px;'></div>
+		<script>
+			var playerParam2 = {
+				'pcode':'BvaTkyOonHxxioyLq4sycIINGXKH', <!-- from your account -->
+				'playerBrandingId':'1e36243a94d54e5d9da5f39a667020d3', <!-- player id -->
+				'embedToken':'http://player.ooyala.com/sas/embed_token/BvaTkyOonHxxioyLq4sycIINGXKH/VmOXlvYzE6cnEKu76OjQ3N4CAQF66QcP?account_id=bb09b69431a74328b63dd583fee318fc&api_key=BvaTkyOonHxxioyLq4sycIINGXKH.sMgw1&country=ALL&expires=1529565288&signature=3ETXdXAHfLgRMGS9yCrDgHXSka6AcaWhZevriPqjUEg&override_syndication_group=override_all_synd_groups',
+				 //'encodingPriority': ["hds","hls", "dash", "mp4", "webm"], <!-- encoding priority order-->
+				'skin': {
+					'config': '//player.ooyala.com/static/v4/production/skin-plugin/skin.json'
+					} 
+				};
+				OO.ready(function() {
+					window.pp = OO.Player.create(  <!-- div id and embed code -->
+								'container2', 'VmOXlvYzE6cnEKu76OjQ3N4CAQF66QcP', playerParam2); 
+								
+				}); 
+		</script>		
+		
+	</body>
+</html>
