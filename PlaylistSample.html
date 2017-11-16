@@ -19,8 +19,8 @@ OO.ready(function() {
     var playerConfiguration = {
 "pcode": "hidm4xOtnoc0OwWaDZnM4-sJ0A0r", 
 "playerBrandingId": "3f600cabc3144afbad0b45e5f8f7b271", 
-"useFirstVideoFromPlaylist": false, 
-"playlistsPlugin": {"data":["9bd2cf710f97419f9413ea41dea9ed42"]},
+"useFirstVideoFromPlaylist": true, 
+playlistsPlugin: {"data":["9bd2cf710f97419f9413ea41dea9ed42"]},
 "autoplay": false,
               "skin": {
                 // Config contains the configuration setting for player skin. Change to your local config when necessary.
@@ -32,7 +32,7 @@ OO.ready(function() {
         //useFirstVideoFromPlaylist: true
     };
  
-    ooyalaPlayer = OO.Player.create('playerContainer','EweXUwNjE6GM43FbX5imPVgtXAIqtVsV',playerConfiguration);
+    ooyalaPlayer = OO.Player.create('playerContainer','',playerConfiguration);
 });
  
 </script>
