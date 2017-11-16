@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ooyala - MC Playlist Sample</title>
+    </head>
+    <body>
+  <div id="playerContainer" ></div>
+<script src='//player.ooyala.com/static/v4/production/core.min.js'></script>
+<script src='//player.ooyala.com/static/v4/production/video-plugin/main_html5.min.js'></script>
+<script src='//player.ooyala.com/static/v4/production/video-plugin/bit_wrapper.min.js'></script>
+<script src='//player.ooyala.com/static/v4/production/other-plugin/playlists.js'></script>
+<script src='//player.ooyala.com/static/v4/production/skin-plugin/html5-skin.js'></script>
+<link rel="stylesheet" href="//player.ooyala.com/static/v4/production/skin-plugin/html5-skin.min.css"/>
+<script type="text/javascript">
+var ooyalaPlayer;
+ 
+OO.ready(function() {
+    var playerConfiguration = {
+"pcode": "hidm4xOtnoc0OwWaDZnM4-sJ0A0r", 
+"playerBrandingId": "3f600cabc3144afbad0b45e5f8f7b271", 
+"useFirstVideoFromPlaylist": true, 
+        playlistsPlugin: {"data":["9bd2cf710f97419f9413ea41dea9ed42"]},
+        autoplay: false,
+        loop: false,
+        height: 531,
+        width: 800,
+        useFirstVideoFromPlaylist: true
+    };
+ 
+    ooyalaPlayer = OO.Player.create('playerContainer','',playerConfiguration);
+});
+ 
+</script>
+</html>
