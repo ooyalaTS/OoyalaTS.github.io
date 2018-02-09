@@ -60,10 +60,10 @@
     "showTitle": true,
     "showDescription": true,
     "titleFont": {
-      "color": "white"
+      "color": "blue"
     },
     "descriptionFont": {
-      "color": "white"
+      "color": "blue"
     },
     "infoPanelPosition": "topLeft",
     "showPromo": true
@@ -107,7 +107,7 @@
       "show": true,
       "font": {
         "fontFamily": "Roboto Condensed",
-        "color": "white"
+        "color": "blue"
       }
     },
     "showCountDownTimerOnEndScreen": true,
