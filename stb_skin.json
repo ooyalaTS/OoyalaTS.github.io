@@ -16,7 +16,7 @@
     "availableLanguageFile": [
       {
         "language": "en",
-        "languageFile": "",
+        "languageFile": "stb_en.json",
         "androidResource": "skin-config/languageFiles/en.json",
         "iosResource": "en"
       },
