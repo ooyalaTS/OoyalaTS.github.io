@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Player V4 in Web Page</title>
+        <!-- V4 JS core is required. Plugins such as skin, discovery and Advertising need to be loaded separately -->
+        <script src="//player.ooyala.com/static/v4/production/core.min.js"></script>
+        <!-- Change these html5-skin.min.css and html5-skin.js to your local build if necessary -->
+        <script src="//player.ooyala.com/static/v4/production/skin-plugin/html5-skin.min.js"></script>
+        <script src="//player.ooyala.com/static/v4/production/video-plugin/bit_wrapper.min.js"></script>
+
+        <link rel="stylesheet" href="//player.ooyala.com/static/v4/production/skin-plugin/html5-skin.min.css"/>
+        <!-- A Video Plugin is required. This example shows the Main Video Plugin -->
+        <script src="//player.ooyala.com/static/v4/production/video-plugin/main_html5.min.js"></script>
+        <!-- Playlists Module -->   
+        <script src="//player.ooyala.com/static/v4/production/other-plugin/playlists.js"></script>
+    </head>
+
+<body>
+<h1> Player with playlist <h1> 
+<div id="playerContainer" style="width:640px;height:352px;"></div>
+
+<script type="text/javascript">
+var ooyalaPlayer;
+
+OO.ready(function() {
+var playerConfiguration = {
+    "autoplay": true,
+    "loop": false,
+    "pcode": "53MmwyOgUS95NoOTF8PY7wNf0uZU",
+    "playerBrandingId": "4f60e94c98b54d71b7a11799597d1d9b"
+  };
+
+    ooyalaPlayer = OO.Player.create('playerContainer', 'BvbGg0ZTE6jYBbxhS-T2XmV9A0pHDmjx', playerConfiguration);
+});
+
+
+</script>
+</body>
+</html>
