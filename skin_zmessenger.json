@@ -17,7 +17,7 @@
     "availableLanguageFile": [
       {
         "language": "en",
-        "languageFile": "",
+        "languageFile": "https://ooyalats.github.io/en_zmessenger.json",
         "androidResource": "skin-config/languageFiles/en.json",
         "iosResource": "en"
       },
@@ -67,8 +67,8 @@
   },
   "startScreen": {
     "promoImageSize": "default",
-    "showPlayButton": true,
-    "playButtonPosition": "center",
+    "showPlayButton": false,
+    "playButtonPosition": "topLeft",
     "playIconStyle": {
       "color": "white",
       "opacity": 1
