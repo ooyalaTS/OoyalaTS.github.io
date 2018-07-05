@@ -99,7 +99,7 @@
     },
     "showTitle": true,
     "showDescription": true,
-    "infoPanelPosition": "topLeft",
+    "infoPanelPosition": "center",
     "screenToShowOnPause": "default"
   },
   "endScreen": {
