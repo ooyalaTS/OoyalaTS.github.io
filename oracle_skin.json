@@ -74,7 +74,7 @@
   "startScreen": {
     "promoImageSize": "default",
     "showPlayButton": true,
-    "playButtonPosition": "center",
+    "playButtonPosition": "bottomRight",
     "playIconStyle": {
       "color": "white",
       "opacity": 1
@@ -87,7 +87,7 @@
     "descriptionFont": {
       "color": "white"
     },
-    "infoPanelPosition": "topLeft",
+    "infoPanelPosition": "center",
     "showPromo": true
   },
   "pauseScreen": {
